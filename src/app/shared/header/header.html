@@ -1,11 +1,12 @@
-<header class="bg-primary text-light font-konkhmer sticky px-16 py-5">
+<header class="bg-primary text-light font-konkhmer sticky md:relative top-0 z-50 px-6 py-5">
     <nav class="flex justify-between items-center">
-        <!-- Logo image -->
+        <!-- Logo -->
         <a routerLink="/home" class="w-16 h-16 flex items-center justify-center">
-            <img src="./Main_Logo.png" alt="Logo" fill class="w-full h-full object-contain" />
+            <img src="./Main_Logo.png" alt="Logo" class="w-full h-full object-contain" />
         </a>
-        <!-- Navigation -->
-        <div class="flex items-end space-x-8">
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-end space-x-8">
             <a routerLink="/home" routerLinkActive="text-accent_blue after:w-full"
                 [routerLinkActiveOptions]="{ exact: true }"
                 class="relative text-2xl after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent_blue after:transition-all after:duration-300 hover:after:w-full transition-colors">
@@ -24,5 +25,23 @@
                 CONTACT
             </a>
         </div>
+
+        <!-- Mobile Burger Button -->
+        <button (click)="toggleMenu()" class="md:hidden flex flex-col space-y-1.5 focus:outline-none">
+            <span [class.rotate-45]="isMenuOpen" [class.translate-y-2]="isMenuOpen"
+                class="block w-6 h-0.5 bg-light transition-all duration-300"></span>
+            <span [class.opacity-0]="isMenuOpen" class="block w-6 h-0.5 bg-light transition-all duration-300"></span>
+            <span [class.-rotate-45]="isMenuOpen" [class.-translate-y-2]="isMenuOpen"
+                class="block w-6 h-0.5 bg-light transition-all duration-300"></span>
+        </button>
     </nav>
+
+    <!-- Mobile Menu -->
+    @if (isMenuOpen) { <div class="md:hidden mt-4 flex flex-col space-y-4">
+        <a routerLink="/home" routerLinkActive="text-accent_blue" class="text-2xl">HOME</a>
+        <a routerLink="/about" routerLinkActive="text-accent_blue" class="text-2xl">ABOUT</a>
+        <a routerLink="/resume" routerLinkActive="text-accent_blue" class="text-2xl">RESUME</a>
+        <a routerLink="/contact" routerLinkActive="text-accent_blue" class="text-2xl">CONTACT</a>
+    </div>}
+
 </header>
