@@ -8,7 +8,7 @@
     <!-- Nav links -->
     <a *ngFor="let link of navLinks"
        [routerLink]="link.path"
-       routerLinkActive="text-accent"
+       routerLinkActive="text-accent_blue"
        [routerLinkActiveOptions]="{ exact: link.exact || false }"
        class="grow text-center transition-colors">
       {{ link.label }}
