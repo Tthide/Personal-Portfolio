@@ -1,14 +1,21 @@
+// src/app/app.routes.ts
 import { Routes } from '@angular/router';
+import { LayoutComponent } from './shared/layout/layout';
 import { HomeComponent } from './home/home';
 import { AboutComponent } from './about/about';
 import { ResumeComponent } from './resume/resume';
 import { ContactComponent } from './contact/contact';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'resume', component: ResumeComponent },
-  { path: 'contact', component: ContactComponent },
-  // Add other routes here
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'resume', component: ResumeComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+    ],
+  },
 ];

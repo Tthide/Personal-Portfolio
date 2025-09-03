@@ -1,4 +1,3 @@
-// src/app/layout/layout.component.ts
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header';
 import { FooterComponent } from '../footer/footer';
