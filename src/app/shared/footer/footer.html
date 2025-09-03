@@ -1,0 +1,29 @@
+<footer class="bg-primary text-light font-konkhmer px-16 py-5">
+  <nav class="flex flex-row grow items-end text-xl text-light divide-x-2 divide-solid divide-light">
+    <!-- Logo -->
+    <a routerLink="/home" class="grow flex justify-center items-center">
+      <img src="./Main_Logo.png" alt="Logo" class="h-[6lh] w-auto object-contain" />
+    </a>
+
+    <!-- Nav links -->
+    <a *ngFor="let link of navLinks"
+       [routerLink]="link.path"
+       routerLinkActive="text-accent"
+       [routerLinkActiveOptions]="{ exact: link.exact || false }"
+       class="grow text-center transition-colors">
+      {{ link.label }}
+    </a>
+
+    <!-- Social links -->
+    <a *ngFor="let social of socialLinks"
+       [href]="social.href"
+       class="grow flex justify-center items-center">
+      <img [src]="social.img" [alt]="social.alt" class="h-[1lh] w-auto object-contain" />
+    </a>
+
+    <!-- Copyright -->
+    <div class="grow text-center flex items-center justify-center">
+      © {{ currentYear }} Thibault Borde
+    </div>
+  </nav>
+</footer>
