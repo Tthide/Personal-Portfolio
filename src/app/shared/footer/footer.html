@@ -1,23 +1,24 @@
-<footer class="bg-primary text-light font-konkhmer px-16 py-5">
-    <nav class="flex flex-row grow items-end text-xl text-light divide-x-2 divide-solid divide-light">
+<footer class="bg-primary text-light font-konkhmer px-6 lg:px-16 py-5">
+    <nav
+        class="flex flex-col md:flex-row grow  items-center md:items-end text-xl text-light md:divide-x-2 divide-solid divide-light">
         <!-- Logo -->
-        <a routerLink="/home" class="grow flex justify-center items-center">
-            <img src="./Main_Logo.png" alt="Logo" class="h-[6lh] w-auto object-contain" />
+        <a routerLink="/home" class="grow flex justify-center items-center mb-4 md:mb-0">
+            <img src="./Main_Logo.png" alt="Logo" class="h-[4lh] lg:h-[6lh] w-auto object-contain" />
         </a>
 
         <!-- Nav links -->
         @for (link of navLinks; track $index) {
         <a [routerLink]="link.path" routerLinkActive="text-accent_blue"
-            [routerLinkActiveOptions]="{ exact: link.exact || false }" class="grow text-center transition-colors">
+            [routerLinkActiveOptions]="{ exact: link.exact || false }" class="grow text-center transition-colors mb-4 md:mb-0">
             {{ link.label }}
         </a>
         }
         <!-- Social links -->
         @for (social of socialLinks; track $index) {
-        <a [href]="social.href" class="grow flex justify-center items-center">
+        <a [href]="social.href" class="grow flex justify-center items-center mb-4 md:mb-0">
             <img [src]="social.img" [alt]="social.alt" class="h-[1lh] w-auto object-contain" />
         </a>
-        } 
+        }
         <!-- Copyright -->
         <div class="grow text-center flex items-center justify-center">
             © {{ currentYear }} Thibault Borde
