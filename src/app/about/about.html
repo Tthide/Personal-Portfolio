@@ -1,40 +1,43 @@
-<div class="py-12 flex flex-col items-center gap-20">
+<div class="py-12 flex flex-col items-center gap-32 px-4 md:px-12">
 
     <!-- Hero Row -->
-    <div class="w-full flex flex-row justify-evenly items-center gap-52">
+    <div class="w-full flex flex-col md:flex-row justify-center md:justify-evenly items-center gap-10 md:gap-20">
         <!-- Text Intro -->
-        <div class="w-full">
-            <h1 class="w-full text-3xl font-spartan">
+        <div class="w-full md:w-1/2">
+            <h1 class="text-3xl md:text-4xl font-spartan leading-snug">
                 <span class="text-accent_purple font-bold">UX Engineer</span>
-                <span class="text-smooth_dark font-normal"> with a Double Degree EMSE & TU Wien and specialisation in
+                <span class="text-smooth_dark font-normal"> with a Double Degree EMSE & TU Wien and specialization in
                 </span>
                 <span class="text-accent_purple font-bold">Human-Centered Computing</span>
                 <span class="text-smooth_dark font-normal">. Based in Lyon, France</span>
             </h1>
-            <p class="w-[465px] text-smooth_dark text-xl font-normal tracking-[3.2px]">
+            <p class="text-smooth_dark text-lg md:text-xl font-normal font-spartan tracking-wider mt-4 max-w-md">
                 Among many other things...
             </p>
         </div>
+
         <!-- Picture -->
-        <div class="relative w-full h-96 bg-zinc-300 flex items-center justify-center">
-            <span class="text-smooth_dark text-xl font-normal font-spartan">Picture of
-                me</span>
+        <div class="relative w-full md:w-1/2 h-64 md:h-96 bg-zinc-300 flex items-center justify-center">
+            <span class="text-smooth_dark text-xl font-normal font-spartan">Picture of me</span>
         </div>
     </div>
 
+    <!-- Divider -->
+    <div class="hidden md:block h-1 bg-accent_purple self-stretch"></div>
+
     <!-- Main Content -->
-    <div class="w-full flex flex-col gap-36">
+    <div class="w-full flex flex-col gap-16 md:gap-24">
 
         <!-- About Me -->
-        <section class="flex flex-col gap-2.5">
-            <h2 class="text-accent_purple text-3xl font-semibold font-spartan">About Me</h2>
-            <p class="text-smooth_dark text-2xl font-normal font-spartan">
-                Hello! I’m Thibault Borde, a Junior UX Engineer with a double degree from
+        <section class="flex flex-col gap-4">
+            <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">About Me</h2>
+            <p class="text-smooth_dark text-lg md:text-2xl font-normal font-spartan leading-relaxed">
+                Hello! I’m Thibault Borde, a UX Engineer with a double degree from
                 <span class="text-accent_purple">EMSE</span> (École des Mines de Saint-Étienne) and
                 <span class="text-accent_purple">TU Wien</span>, specializing in Human-Centered Computing and Media.
                 My academic and professional journey has been shaped by a deep curiosity for
                 <span class="text-accent_purple">technology, human behavior, and inclusive design</span>.
-                I thrive at the intersection of <span class="text-accent_purple">user experience, software development,
+                I thrive working with <span class="text-accent_purple">user experience, software development,
                     and
                     creative problem-solving</span>,
                 and I’m passionate about crafting digital experiences that are not only functional but also
@@ -44,28 +47,36 @@
 
         <!-- Why UX -->
         <section class="flex flex-col gap-2.5">
-            <h2 class="text-accent_purple text-3xl font-semibold font-spartan">Why UX?</h2>
-            <p class="text-smooth_dark text-2xl font-normal font-spartan">
+            <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">Why UX?</h2>
+            <p class="text-smooth_dark text-lg md:text-2xl font-normal font-spartan">
                 Ever since I was a kid, I always knew I wanted to <span class="text-accent_purple">create and design
                     things</span>,
                 especially if it could help people in their daily life. I was (and still am) very
                 <span class="text-accent_purple">curious about science and how things work</span>.
                 I would draw mechanisms that popped in my head, or build pipelines out of paper sheets to create a
                 circuit for marbles.
+                <br/> 
+                <br/> 
                 Discovering UX principles on a random Instagram post was a <span
-                    class="text-accent_purple">game-changer</span> for me.
-                Engineering shouldn’t just be about making systems work; it should also be about making them enjoyable,
-                intuitive,
-                and meaningful for the people who use them.
+                    class="text-accent_purple">game-changer</span> for me. Indeed, I have always thought of designing
+                and creating things for the sake of efficiency (a very engineer mindset indeed). However, I never really
+                considered how people could be impacted by designs and that, ultimately, it is people that use and
+                should benefit from the things we create. That’s when it clicked:
+
             </p>
+            <p class="text-accent_purple my-4 text-center text-2xl font-montserrat italic font-semibold"> Engineering
+                shouldn’t just be about making systems work; it should also be
+                about making them enjoyable,
+                intuitive,
+                and meaningful for the people who use them.</p>
         </section>
 
         <!-- My Journey / Beyond the Screen -->
-        <div class="flex flex-row w-full gap-10">
+        <div class="flex flex-col md:flex-row w-full gap-10">
             <!-- My Journey -->
-            <div class="flex-1 flex flex-col gap-2.5">
-                <h2 class="text-accent_purple text-3xl font-semibold font-spartan">My Journey</h2>
-                <ul class="text-smooth_dark text-2xl font-normal font-spartan space-y-3">
+            <div class="flex-1 flex flex-col gap-4">
+                <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">My Journey</h2>
+                <ul class="text-smooth_dark text-lg md:text-2xl font-normal font-spartan space-y-3">
                     <li class="flex gap-3 items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 text-accent_purple relative flex-shrink-0">
@@ -104,17 +115,15 @@
                         </span>
                     </li>
                 </ul>
-
-
             </div>
 
             <!-- Divider -->
-            <div class="w-1 bg-accent_purple self-stretch"></div>
+            <div class="hidden md:block w-1 bg-accent_purple self-stretch"></div>
 
             <!-- Beyond the Screen -->
-            <div class="flex-1 flex flex-col gap-2.5">
-                <h2 class="text-accent_purple text-3xl font-semibold font-spartan">Beyond the screen</h2>
-                <ul class="text-smooth_dark text-2xl font-normal font-spartan space-y-3">
+            <div class="flex-1 flex flex-col gap-4">
+                <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">Beyond the screen</h2>
+                <ul class="text-smooth_dark text-lg md:text-2xl font-normal font-spartan space-y-3">
                     <li class="flex gap-3 items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -164,15 +173,15 @@
                         </span>
                     </li>
                 </ul>
-
             </div>
         </div>
 
         <!-- Contact Section -->
-        <section class="flex flex-col gap-2.5 w-full">
-            <h2 class="text-accent_purple text-3xl font-semibold font-spartan">Let’s Connect!</h2>
-            <p class="text-smooth_dark text-2xl font-normal font-spartan">
-                I’m always eager to collaborate on projects, discuss UX trends, or chat about anything. Reach out via this Contact form, 
+        <section class="flex flex-col gap-4 w-full">
+            <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">Let’s Connect!</h2>
+            <p class="text-smooth_dark text-lg md:text-2xl font-normal font-spartan leading-relaxed">
+                I’m always eager to collaborate on projects, discuss UX trends, or chat about anything. Reach out via
+                this Contact form,
                 email, or LinkedIn!
             </p>
 
@@ -199,11 +208,9 @@
                     </a>
                 </div>
 
-
-
                 <!-- Contact Form -->
                 <div class="flex-1 flex self-stretch items-center">
-                    <div class="w-full h-full bg-zinc-300 flex items-center justify-center">
+                    <div class="w-full h-64 md:h-full bg-zinc-300 flex items-center justify-center">
                         Contact Form
                     </div>
                 </div>

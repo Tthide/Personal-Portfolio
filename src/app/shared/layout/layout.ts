@@ -9,12 +9,13 @@ import { RouterOutlet } from '@angular/router';
   imports: [HeaderComponent, FooterComponent, RouterOutlet],
   template: `
     <app-header />
-    <div class="flex flex-col bg-light px-6 lg:px-60 md:px-10 ">
-    <main>
-      <router-outlet />
-    </main>
-    <app-footer />
+    <div class="flex flex-col bg-light">
+      <main class="px-6 lg:px-60 md:px-10">
+        <router-outlet />
+      </main>
+      <app-footer class="px-0 md:px-10 lg:px-60" />
     </div>
+
   `,
 })
 export class LayoutComponent {}

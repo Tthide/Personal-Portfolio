@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         konkhmer: ["Konkhmer Sleokchher", "sans-serif"],
         spartan: ["League Spartan", "sans-serif"],
+        montserrat: ["Montserrat"],
       },
     },
   },
