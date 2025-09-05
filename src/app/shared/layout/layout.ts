@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
   template: `
     <app-header />
     <div class="flex flex-col bg-light">
-      <main class="px-6 lg:px-60 md:px-10">
+      <main class="px-6 py-10 lg:px-60 lg:py-16 md:px-10">
         <router-outlet />
       </main>
       <app-footer class="px-0 md:px-10 lg:px-60" />
