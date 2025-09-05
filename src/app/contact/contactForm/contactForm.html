@@ -31,15 +31,15 @@
       <label for="company">Company</label>
       <input type="text" id="company" formControlName="company" tabindex="-1" autocomplete="off" />
     </div>
-    
+
     <div class="grow flex flex-col gap-1">
       <label class="block  font-semibold" for="message">Message <span class="font-normal">(required)</span></label>
       <textarea id="message" formControlName="message" rows="4"
         class="w-full px-4 py-2 border rounded-lg shadow-md outline outline-1 outline-smooth_dark focus:outline-none focus:ring-2 focus:accent-accent_purple"></textarea>
     </div>
 
-    <button type="submit"
-      class="w-full bg-accent_purple text-light font-semibold py-2 rounded-lg hover:bg-white hover:outline hover:outline-2 hover:outline-accent_purple hover:text-accent_purple transition">
+    <button type="submit" [disabled]="!contactForm.valid"
+      class="w-full bg-accent_purple text-light font-semibold py-2 rounded-lg disabled:opacity-40 disabled:cursor-not-allowed enabled:hover:bg-white enabled:hover:outline enabled:hover:outline-2 enabled:hover:outline-accent_purple enabled:hover:text-accent_purple enabled:transition">
       Send Message
     </button>
   </form>
