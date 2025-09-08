@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-project-item',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './project-item.css'
 })
 export class ProjectItemComponent {
+  id!: string;
 
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => this.id = params.get('id') ?? '');
+  }
 }
