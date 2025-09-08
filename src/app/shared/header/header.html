@@ -16,7 +16,7 @@
                 class="relative text-2xl after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent_blue after:transition-all after:duration-300 hover:after:w-full transition-colors">
                 ABOUT
             </a>
-            <a routerLink="/resume" routerLinkActive="text-accent_blue after:w-full"
+            <a href="./CV_Borde_Thibault.pdf" target="_blank" rel="noopener noreferrer"
                 class="relative text-2xl after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent_blue after:transition-all after:duration-300 hover:after:w-full transition-colors">
                 RESUME
             </a>
@@ -40,7 +40,7 @@
     @if (isMenuOpen) { <div class="md:hidden mt-4 flex flex-col space-y-4">
         <a (click)="toggleMenu()" routerLink="/home" routerLinkActive="text-accent_blue" class="text-2xl">HOME</a>
         <a (click)="toggleMenu()" routerLink="/about" routerLinkActive="text-accent_blue" class="text-2xl">ABOUT</a>
-        <a (click)="toggleMenu()" routerLink="/resume" routerLinkActive="text-accent_blue" class="text-2xl">RESUME</a>
+        <a (click)="toggleMenu()"  href="./CV_Borde_Thibault.pdf" target="_blank" rel="noopener noreferrer" class="text-2xl">RESUME</a>
         <a (click)="toggleMenu()" routerLink="/contact" routerLinkActive="text-accent_blue" class="text-2xl">CONTACT</a>
     </div>}
 
