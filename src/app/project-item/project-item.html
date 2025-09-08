@@ -1,9 +1,11 @@
 <div class="flex flex-col gap-20">
     <!-- Hero -->
     <div class="flex flex-col items-center gap-14 text-center min-h-hero">
-        <h1 class="text-smooth_dark text-3xl md:text-5xl lg:text-8xl  font-spartan">Project N°{{id}} Title</h1>
-        <div class="grow px-96 py-16 bg-accent_blue flex items-center justify-center">
-            <p class="w-96 text-smooth_dark text-xl font-spartan">
+        <h1 class="text-smooth_dark text-3xl md:text-5xl lg:text-8xl font-spartan">
+            Project N°{{id}} Title
+        </h1>
+        <div class="grow w-full bg-accent_blue flex items-center justify-center">
+            <p class="w-full max-w-md text-smooth_dark text-lg sm:text-xl font-spartan">
                 PROJECT MAIN PICTURE OVERVIEW<br />/ GAME
             </p>
         </div>
@@ -12,15 +14,17 @@
             <app-rotating-text-icon [size]="120" [fontSize]="12" [text]="'READ MORE'" [speed]="14" [scale]="3">
             </app-rotating-text-icon>
         </div>
-
     </div>
 
-
+    <!-- Divider -->
+    <div class="w-full border-t-4 border-primary"></div>
 
     <!-- Overview -->
-    <section class="flex items-start gap-12">
-        <h2 class="w-80 text-smooth_dark text-5xl font-spartan">Project Overview</h2>
-        <p class="flex-1 text-smooth_dark text-xl font-spartan">
+    <section class="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+        <h2 class="lg:w-80 text-dark font-semibold text-3xl md:text-4xl lg:text-5xl font-spartan">
+            PROJECT OVERVIEW
+        </h2>
+        <p class="flex-1 text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
             Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis leo
             semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra augue
@@ -40,39 +44,43 @@
         </p>
     </section>
 
-    <!-- Divider -->
-    <div class="w-full border-t-4 border-primary"></div>
 
     <!-- Objective -->
-    <section class="flex flex-col gap-12">
-        <h3 class="text-accent_purple text-3xl font-bold font-spartan">OBJECTIVE / CHALLENGE</h3>
-        <p class="text-smooth_dark text-xl font-spartan">
+    <section class="flex flex-col gap-6 md:gap-12">
+        <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">OBJECTIVE / CHALLENGE</h3>
+        <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
             Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis leo
             semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra augue
             commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar eros tellus
             nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac laoreet ligula
             ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis aliquet finibus, ipsum
-            orci pretium diam, non sodales felis eros ut metus. </p>
+            orci pretium diam, non sodales felis eros ut metus.
+        </p>
     </section>
 
-    <div class="w-full border-t-4 border-primary"></div>
 
     <!-- Timeframe / Skills / Tech -->
-    <section class="flex justify-between w-full gap-6 ">
+    <section class="flex flex-col md:flex-row justify-between w-full gap-6">
         <div class="flex-1 flex flex-col gap-4">
-            <h3 class="text-accent_purple text-3xl font-bold font-spartan">TIMEFRAME</h3>
-            <p class="text-smooth_dark text-xl font-spartan">4 weeks</p>
+            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">TIMEFRAME</h3>
+            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">4 weeks</p>
         </div>
         <div class="flex-1 flex flex-col gap-4">
-            <h3 class="text-accent_purple text-3xl font-bold font-spartan">SKILLS USED</h3>
-            <p class="text-smooth_dark text-xl font-spartan">Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-            </p>
+            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">SKILLS USED</h3>
+            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
+                Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis
+                leo
+                semper massa iaculis vehicula.</p>
         </div>
         <div class="flex-1 flex flex-col gap-4">
-            <h3 class="text-accent_purple text-3xl font-bold font-spartan">TECH INVOLVED</h3>
-            <p class="text-smooth_dark text-xl font-spartan">Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-            </p>
+            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">TECH INVOLVED</h3>
+            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
+                Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis
+                leo
+                semper massa iaculis vehicula.</p>
         </div>
     </section>
 
@@ -80,89 +88,107 @@
 
     <!-- Process -->
     <section class="flex flex-col gap-10">
-        <h2 class="text-smooth_dark text-5xl font-spartan">PROCESS</h2>
+        <h2 class="text-smooth_dark text-3xl md:text-4xl lg:text-5xl font-spartan">PROCESS</h2>
 
-        <div class="flex flex-col gap-12">
-            <h3 class="text-accent_purple text-3xl font-bold font-spartan">Process Step 1</h3>
-            <p class="text-smooth_dark text-xl font-spartan">
+        <div class="flex flex-col gap-6 md:gap-12">
+            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">Process Step 1</h3>
+            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
                 Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis
-                leo semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra
-                augue commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar
-                eros tellus nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac
-                laoreet ligula ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis
-                aliquet finibus, ipsum orci pretium diam, non sodales felis eros ut metus.
+                leo
+                semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra
+                augue
+                commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar eros
+                tellus
+                nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac laoreet ligula
+                ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis aliquet finibus,
+                ipsum
+                orci pretium diam, non sodales felis eros ut metus.
             </p>
         </div>
 
-        <div class="flex flex-col gap-12">
-            <h3 class="text-accent_purple text-3xl font-bold font-spartan">Process Step 2</h3>
-            <div class="flex gap-7">
-                <p class="flex-1 text-smooth_dark text-xl font-spartan">
+        <div class="flex flex-col gap-6 md:gap-12">
+            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">Process Step 2</h3>
+            <div class="flex flex-col md:flex-row gap-6 md:gap-7">
+                <p class="flex-1 text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor
-                    gravida. Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus.
-                    Duis lobortis leo semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod
-                    ligula, nec viverra augue commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla
-                    dictum ipsum, et pulvinar eros tellus nec orci. Quisque volutpat nulla id erat lobortis luctus.
-                    Etiam sodales vehicula dui, ac laoreet ligula ornare vel. Integer nec mauris ut nulla condimentum
-                    faucibus. Nam dapibus, ex quis aliquet finibus, ipsum orci pretium diam, non sodales felis eros ut
-                    metus.
+                    gravida.
+                    Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis
+                    lobortis leo
+                    semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra
+                    augue
+                    commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar eros
+                    tellus
+                    nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac laoreet
+                    ligula
+                    ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis aliquet finibus,
+                    ipsum
+                    orci pretium diam, non sodales felis eros ut metus.
                 </p>
-                <div class="flex-1 relative bg-accent_blue flex items-center justify-center">
-                    <span class="absolute text-smooth_dark text-xl font-spartan">Picture Placeholder</span>
+                <div
+                    class="flex-1 relative min-h-[200px] md:min-h-[300px] bg-accent_blue flex items-center justify-center">
+                    <span class="absolute text-smooth_dark text-sm sm:text-base md:text-xl font-spartan">
+                        Picture Placeholder
+                    </span>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="w-full border-t-4 border-primary"></div>
-
     <!-- Results -->
-    <section class="flex flex-col gap-12">
-        <h3 class="text-accent_purple text-3xl font-bold font-spartan">RESULTS & IMPACTS</h3>
-        <div class="flex flex-col gap-2 text-smooth_dark text-xl font-bold font-spartan">
-            <p class="font-bold">
-                User feedback, KPI, Personal reflection
-            </p>
-            <p class="font-normal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
+    <section class="flex flex-col gap-6 md:gap-12">
+        <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">RESULTS & IMPACTS</h3>
+        <div class="flex flex-col gap-2 text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
+            <p class="font-bold">User feedback, KPI, Personal reflection</p>
+            <p class="font-normal"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non
+                sem auctor gravida.
                 Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis
-                leo semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra
-                augue commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar
-                eros tellus nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac
-                laoreet ligula ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis
-                aliquet finibus, ipsum orci pretium diam, non sodales felis eros ut metus.
-            </p>
+                leo
+                semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra
+                augue
+                commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar eros
+                tellus
+                nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac laoreet ligula
+                ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis aliquet finibus,
+                ipsum
+                orci pretium diam, non sodales felis eros ut metus.</p>
         </div>
     </section>
 
+    <!-- Divider -->
     <div class="w-full border-t-4 border-primary"></div>
 
     <!-- Visual Gallery -->
-    <section class="flex flex-col gap-12">
-        <h2 class="text-smooth_dark text-5xl font-spartan">VISUAL GALLERY</h2>
+    <section class="flex flex-col gap-10">
+        <h2 class="text-smooth_dark text-3xl md:text-4xl lg:text-5xl font-spartan">VISUAL GALLERY</h2>
 
         <!-- Gallery Item -->
-        <div class="flex flex-col gap-7">
-            <div class="flex flex-col gap-2.5">
-                <h3 class="text-accent_purple text-3xl font-bold font-spartan">Picture Title</h3>
-                <p class="text-smooth_dark text-xl font-spartan">Picture Title, date, City/Context, additional
-                    information</p>
+        <div class="flex flex-col gap-4 sm:gap-7">
+            <div class="flex flex-col gap-1.5 sm:gap-2.5">
+                <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">Picture Title</h3>
+                <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
+                    Picture Title, date, City/Context, additional information
+                </p>
             </div>
-            <div class="grow h-48 relative  bg-accent_blue flex items-center justify-center">
-                <span class="absolute text-smooth_dark text-xl font-spartan">Picture Placeholder</span>
+            <div class="w-full h-40 sm:h-48 relative bg-accent_blue flex items-center justify-center">
+                <span class="absolute text-smooth_dark text-sm sm:text-base md:text-xl font-spartan">
+                    Picture Placeholder
+                </span>
             </div>
         </div>
 
         <!-- Another Gallery Item -->
-        <div class="flex flex-col gap-7">
-            <div class="flex flex-col gap-2.5">
-                <h3 class="text-accent_purple text-3xl font-bold font-spartan">Picture Title</h3>
-                <p class="text-smooth_dark text-xl font-spartan">Picture Title, date, City/Context, additional
-                    information</p>
+        <div class="flex flex-col gap-4 sm:gap-7">
+            <div class="flex flex-col gap-1.5 sm:gap-2.5">
+                <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">Picture Title</h3>
+                <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
+                    Picture Title, date, City/Context, additional information
+                </p>
             </div>
-            <div class="grow h-48 relative bg-accent_blue flex items-center justify-center">
-                <span class="absolute text-smooth_dark text-xl font-spartan">Picture Placeholder</span>
+            <div class="w-full h-40 sm:h-48 relative bg-accent_blue flex items-center justify-center">
+                <span class="absolute text-smooth_dark text-sm sm:text-base md:text-xl font-spartan">
+                    Picture Placeholder
+                </span>
             </div>
         </div>
     </section>
