@@ -8,9 +8,10 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [HeaderComponent, FooterComponent, RouterOutlet],
   template: `
-    <app-header />
-    <div class="flex flex-col bg-light">
-      <main class="px-6 py-10 lg:px-60 lg:py-16 md:px-10">
+    <div class="flex flex-col bg-light min-h-dvh">    
+      <app-header />
+
+      <main class=" grow px-6 py-10 lg:px-60 lg:py-16 md:px-10">
         <router-outlet />
       </main>
       <app-footer class="px-0 md:px-10 lg:px-60" />
@@ -18,4 +19,4 @@ import { RouterOutlet } from '@angular/router';
 
   `,
 })
-export class LayoutComponent {}
+export class LayoutComponent { }
