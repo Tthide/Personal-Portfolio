@@ -1,14 +1,14 @@
 <div class="flex flex-col gap-20">
     <!-- Hero -->
-    <div class="flex flex-col items-center gap-14 text-center lg:min-h-[calc(100dvh-14rem)]">
-        <h1 class="text-smooth_dark text-9xl font-spartan">Project N°{{id}} Title</h1>
+    <div class="flex flex-col items-center gap-14 text-center min-h-hero">
+        <h1 class="text-smooth_dark text-3xl md:text-5xl lg:text-8xl  font-spartan">Project N°{{id}} Title</h1>
         <div class="grow px-96 py-16 bg-accent_blue flex items-center justify-center">
             <p class="w-96 text-smooth_dark text-xl font-spartan">
                 PROJECT MAIN PICTURE OVERVIEW<br />/ GAME
             </p>
         </div>
 
-        <div class="flex justify-center items-center w-full">
+        <div class="hidden lg:flex justify-center items-center w-full">
             <app-rotating-text-icon [size]="120" [fontSize]="12" [text]="'READ MORE'" [speed]="14" [scale]="3">
             </app-rotating-text-icon>
         </div>

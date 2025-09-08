@@ -1,24 +1,36 @@
 <div class="flex flex-col items-center gap-32">
 
     <!-- Hero Row -->
-    <div class="w-full flex flex-col md:flex-row justify-center md:justify-evenly items-center gap-10 md:gap-20">
+    <div
+        class="w-full flex flex-col lg:min-h-hero gap-14">
+
         <!-- Text Intro -->
-        <div class="w-full md:w-1/2">
-            <h1 class="text-3xl md:text-4xl font-spartan leading-snug">
-                <span class="text-accent_purple font-bold">UX Engineer</span>
-                <span class="text-smooth_dark font-normal"> with a Double Degree EMSE & TU Wien and specialization in
-                </span>
-                <span class="text-accent_purple font-bold">Human-Centered Computing</span>
-                <span class="text-smooth_dark font-normal">. Based in Lyon, France</span>
-            </h1>
-            <p class="text-smooth_dark text-lg md:text-xl font-normal font-spartan tracking-wider mt-4 max-w-md">
-                Among many other things...
-            </p>
+        <div class="w-full grow flex flex-col md:flex-row justify-center md:justify-evenly items-center gap-10 md:gap-20">
+            <div class="w-full md:w-1/2">
+
+                <h1 class="text-3xl md:text-4xl font-spartan leading-snug">
+                    <span class="text-accent_purple font-bold">UX Engineer</span>
+                    <span class="text-smooth_dark font-normal"> with a Double Degree EMSE & TU Wien and specialization
+                        in
+                    </span>
+                    <span class="text-accent_purple font-bold">Human-Centered Computing</span>
+                    <span class="text-smooth_dark font-normal">. Based in Lyon, France</span>
+                </h1>
+                <p class="text-smooth_dark text-lg md:text-xl font-normal font-spartan tracking-wider mt-4 max-w-md">
+                    Among many other things...
+                </p>
+            </div>
+
+            <!-- Picture -->
+            <div class="relative w-full md:w-1/2 h-64 md:h-96 bg-zinc-300 flex items-center justify-center">
+                <span class="text-smooth_dark text-xl font-normal font-spartan">Picture of me</span>
+            </div>
         </div>
 
-        <!-- Picture -->
-        <div class="relative w-full md:w-1/2 h-64 md:h-96 bg-zinc-300 flex items-center justify-center">
-            <span class="text-smooth_dark text-xl font-normal font-spartan">Picture of me</span>
+
+        <div class="flex justify-center items-center w-full grow">
+            <app-rotating-text-icon [size]="90" [fontSize]="10" [text]="'READ MORE'" [speed]="14" [scale]="2">
+            </app-rotating-text-icon>
         </div>
     </div>
 
@@ -58,13 +70,16 @@
                 <br />
                 <br />
                 Discovering UX principles on a random Instagram post was a <span
-                    class="text-accent_purple">game-changer</span> for me. Indeed, I have always thought of designing
-                and creating things for the sake of efficiency (a very engineer mindset indeed). However, I never really
+                    class="text-accent_purple">game-changer</span> for me. Indeed, I have always thought of
+                designing
+                and creating things for the sake of efficiency (a very engineer mindset indeed). However, I never
+                really
                 considered how people could be impacted by designs and that, ultimately, it is people that use and
                 should benefit from the things we create. That’s when it clicked:
 
             </p>
-            <p class="text-accent_purple my-4 text-center text-2xl font-montserrat italic font-semibold"> Engineering
+            <p class="text-accent_purple my-4 text-center text-2xl font-montserrat italic font-semibold">
+                Engineering
                 shouldn’t just be about making systems work; it should also be
                 about making them enjoyable,
                 intuitive,
@@ -97,7 +112,8 @@
                         </svg>
 
                         <span>
-                            Specialized in <span class="text-accent_purple">Human-Computer Interaction (TU Wien)</span>
+                            Specialized in <span class="text-accent_purple">Human-Computer Interaction (TU
+                                Wien)</span>
                             — focused on inclusive, ethical, and user-friendly tech.
                         </span>
                     </li>
@@ -122,7 +138,8 @@
 
             <!-- Beyond the Screen -->
             <div class="flex-1 flex flex-col gap-4">
-                <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">Beyond the screen</h2>
+                <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">Beyond the screen
+                </h2>
                 <ul class="text-smooth_dark text-lg md:text-2xl font-normal font-spartan space-y-3">
                     <li class="flex gap-3 items-start">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -136,7 +153,8 @@
                             <path d="M6 9H4.5a1 1 0 0 1 0-5H6" />
                         </svg>
                         <span>
-                            Passion for <span class="text-accent_purple">basketball and football</span> — love teamwork,
+                            Passion for <span class="text-accent_purple">basketball and football</span> — love
+                            teamwork,
                             assists, and cheering at live games.
                         </span>
                     </li>
@@ -183,7 +201,8 @@
             <div class="flex flex-col gap-4 md:w-1/2">
                 <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">Let’s Connect!</h2>
                 <p class="text-smooth_dark text-lg md:text-2xl font-normal font-spartan leading-relaxed">
-                    I’m always eager to collaborate on projects, discuss UX trends, or chat about anything. Reach out
+                    I’m always eager to collaborate on projects, discuss UX trends, or chat about anything. Reach
+                    out
                     via
                     this Contact form,
                     email, or LinkedIn!
