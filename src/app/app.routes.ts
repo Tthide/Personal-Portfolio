@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home';
 import { AboutComponent } from './about/about';
 import { ResumeComponent } from './resume/resume';
 import { ContactComponent } from './contact/contact';
+import { ProjectItemComponent } from './project-item/project-item';
 
 export const routes: Routes = [
   {
@@ -15,7 +16,9 @@ export const routes: Routes = [
       { path: 'about', component: AboutComponent },
       { path: 'resume', component: ResumeComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'project/:id', component: ProjectItemComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
+
     ],
   },
 ];
