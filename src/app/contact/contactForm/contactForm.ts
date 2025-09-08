@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import { DatePipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contactForm.html',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
 })
 export class ContactFormComponent {
   contactForm: FormGroup;
+
+  controlsValidity: { [key: string]: boolean } = {};
+  submittedOnce = false;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -22,9 +25,29 @@ export class ContactFormComponent {
     });
   }
 
+  triggerErrorDisplay(controlName: string): boolean {
+    const control = this.contactForm.get(controlName);
+    return !!(control && control.invalid && this.controlsValidity[controlName]&& (control.dirty || control.pristine|| control.touched));
+  }
+
+  triggerShake(controlName: string) {
+    const control = this.contactForm.get(controlName);
+    if (control && control.invalid) {
+      const input = document.getElementById(controlName);
+      if (input) {
+        input.classList.remove('animate-shake'); // reset animation
+        void input.offsetWidth;
+        input.classList.add('animate-shake');
+      }
+    }
+  }
+
+
   onSubmit() {
+    this.submittedOnce = true;
+
     if (this.contactForm.value.company) {
-      console.warn('Inavlid sender detected, ignoring submission.');
+      console.warn('Invalid sender detected, ignoring submission.');
       return;
     }
 
@@ -48,6 +71,9 @@ export class ContactFormComponent {
             console.log(result.text);
             alert('Message sent successfully!');
             this.contactForm.reset();
+            // reset flags
+            this.submittedOnce = false;
+            this.controlsValidity = {};
           },
           (error) => {
             console.error(error.text);
@@ -55,7 +81,17 @@ export class ContactFormComponent {
           }
         );
     } else {
-      alert('Please fill out all fields correctly.');
+      // trigger shake on all invalid fields
+      Object.keys(this.contactForm.controls).forEach((key) => {
+        const control = this.contactForm.get(key);
+        this.controlsValidity[key] = !!control && control.invalid;
+        if (control && control.invalid) {
+          this.triggerShake(key);
+        }
+      });
+      //alert('Please fill out all fields correctly.');
     }
+
+
   }
 }
