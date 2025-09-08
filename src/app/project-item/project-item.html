@@ -1,13 +1,21 @@
-<div class="px-14 py-10 flex flex-col gap-20">
+<div class="flex flex-col gap-20">
     <!-- Hero -->
-    <div class="flex flex-col items-center gap-14 text-center">
+    <div class="flex flex-col items-center gap-14 text-center lg:min-h-[calc(100dvh-14rem)]">
         <h1 class="text-smooth_dark text-9xl font-spartan">Project N°{{id}} Title</h1>
-        <div class="h-40 px-96 py-16 bg-accent_blue flex items-center justify-center">
+        <div class="grow px-96 py-16 bg-accent_blue flex items-center justify-center">
             <p class="w-96 text-smooth_dark text-xl font-spartan">
                 PROJECT MAIN PICTURE OVERVIEW<br />/ GAME
             </p>
         </div>
+
+        <div class="flex justify-center items-center w-full">
+            <app-rotating-text-icon [size]="120" [fontSize]="12" [text]="'READ MORE'" [speed]="14" [scale]="3">
+            </app-rotating-text-icon>
+        </div>
+
     </div>
+
+
 
     <!-- Overview -->
     <section class="flex items-start gap-12">
@@ -115,7 +123,7 @@
         <div class="flex flex-col gap-2 text-smooth_dark text-xl font-bold font-spartan">
             <p class="font-bold">
                 User feedback, KPI, Personal reflection
-             </p>
+            </p>
             <p class="font-normal">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
                 Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis

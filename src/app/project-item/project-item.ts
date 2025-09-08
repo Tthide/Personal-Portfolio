@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { RotatingTextIconComponent } from '../shared/rotating-text-icon/rotating-text-icon';
 
 @Component({
   selector: 'app-project-item',
-  imports: [],
+  imports: [RotatingTextIconComponent],
   templateUrl: './project-item.html',
   styleUrl: './project-item.css'
 })
