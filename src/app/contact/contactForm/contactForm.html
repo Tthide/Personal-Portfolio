@@ -2,7 +2,7 @@
 
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
 
-    <div class="flex flex-col grow md:flex-row md:gap-6">
+    <div class="flex flex-col grow lg:flex-row md:gap-6">
       <div class="grow flex flex-col gap-1">
         <label class="block  font-semibold" for="name">Name <span class="font-normal">(required)</span></label>
         <input type="text" id="name" formControlName="name"
