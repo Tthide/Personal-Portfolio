@@ -15,11 +15,11 @@
                     "picture_url": ""
                 },
                 "project_overview": {
-                    "desc": "Project overview...",
-                    "objective": "Support local artists",
-                    "timeframe": "2023",
-                    "skills": "UX Research, UI Design",
-                    "tech": "Angular, Tailwind"
+                    "desc": "<strong>KISS</strong> combines the traditional free little library with digital art exhibitions. Passersby can still pick up or drop off regular books, but they also have the chance to interact with special art books. These books act as canvases for projected artworks, offering a tangible yet immersive way to experience local creativity. Interaction is further enriched through a hand-sized dice that lets users explore more information about the artworks and artists, express their feelings, and even connect to merchandise opportunities that support local artists financially.",
+                    "objective": "This project was conducted as part of a university course focused on Design Thinking. The course encouraged students to develop projects without restrictions on theme, technology, or impact, with the aim of animating and enriching public life in Seestadt (Vienna, Austria). Our team of four chose to support local artists, recognizing both the financial instability of the profession and its vital role in making communities more vibrant and livable. By showcasing art in Seestadt, we sought to bring soul and cultural identity to its newly built streets.",
+                    "timeframe": "8 months (2 academic semesters)",
+                    "skills": "Design Thinking, User Research, Wireframing, Prototyping, Product Business Identity, Various Design Methods",
+                    "tech": "Laser cutting machines for prototyping, painting and material finishing, SVG vector graphics, Canva for visual communication materials, graphic production for flyers and posters."
                 },
                 "process": {
                     "steps": [

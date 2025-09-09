@@ -1,46 +1,43 @@
 {
-    "project": {
-        "id": 1000,
-        "content": {
-            "info_card": {
-                "title": "",
-                "subtitle": "",
-                "long_desc": "",
-                "short_desc": "",
-                "key_words": [],
-                "picture_url": ""
-            },
-            "project_overview": {
-                "desc": "",
-                "objective": "",
-                "timeframe": "",
-                "skills": "",
-                "tech": ""
-            },
-            "process": {
-                "steps": [
-                    {
-                        "step_desc": "",
-                        "desc_img_url": ""
-                    },
-                    {
-                        "step_desc": "",
-                        "desc_img_url": ""
-                    }
-                ],
-                "results": ""
-            },
-            "gallery": [
+    "id": 1000,
+    "content": {
+        "info_card": {
+            "title": "",
+            "subtitle": "",
+            "desc": "",
+            "key_words": [],
+            "picture_url": ""
+        },
+        "project_overview": {
+            "desc": "",
+            "objective": "",
+            "timeframe": "",
+            "skills": "",
+            "tech": ""
+        },
+        "process": {
+            "steps": [
                 {
-                    "picture": {
-                        "title": "",
-                        "url": "",
-                        "date": "",
-                        "location": "",
-                        "desc": ""
-                    }
+                    "step_desc": "",
+                    "desc_img_url": ""
+                },
+                {
+                    "step_desc": "",
+                    "desc_img_url": ""
                 }
-            ]
-        }
+            ],
+            "results": ""
+        },
+        "gallery": [
+            {
+                "picture": {
+                    "title": "",
+                    "url": "",
+                    "date": "",
+                    "location": "",
+                    "desc": ""
+                }
+            }
+        ]
     }
 }
