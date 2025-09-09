@@ -2,8 +2,7 @@
 {<div class="flex flex-col gap-20">
     <!-- Hero -->
     <div class="flex flex-col items-center gap-14 text-center min-h-hero">
-        <h1 class="text-smooth_dark text-5xl lg:text-8xl font-spartan"
-            [innerHTML]="project.content.info_card.title">
+        <h1 class="text-smooth_dark text-5xl lg:text-8xl font-spartan" [innerHTML]="project.content.info_card.title">
         </h1>
         <div class="grow w-full bg-accent_blue flex items-center justify-center">
             @if (project.content.info_card.picture_url) {
@@ -30,7 +29,7 @@
             PROJECT OVERVIEW
         </h2>
         <p class="flex-1 text-smooth_dark text-base sm:text-lg md:text-xl font-spartan"
-           [innerHTML]="project.content.project_overview.desc">
+            [innerHTML]="project.content.project_overview.desc">
         </p>
     </section>
 
@@ -38,7 +37,7 @@
     <section class="flex flex-col gap-6 md:gap-12">
         <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">OBJECTIVE / CHALLENGE</h3>
         <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan"
-           [innerHTML]="project.content.project_overview.objective">
+            [innerHTML]="project.content.project_overview.objective">
         </p>
     </section>
 
@@ -47,19 +46,19 @@
         <div class="flex-1 flex flex-col gap-4">
             <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">TIMEFRAME</h3>
             <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan"
-               [innerHTML]="project.content.project_overview.timeframe">
+                [innerHTML]="project.content.project_overview.timeframe">
             </p>
         </div>
         <div class="flex-1 flex flex-col gap-4">
             <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">SKILLS USED</h3>
             <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan"
-               [innerHTML]="project.content.project_overview.skills">
+                [innerHTML]="project.content.project_overview.skills">
             </p>
         </div>
         <div class="flex-1 flex flex-col gap-4">
             <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">TECH INVOLVED</h3>
             <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan"
-               [innerHTML]="project.content.project_overview.tech">
+                [innerHTML]="project.content.project_overview.tech">
             </p>
         </div>
     </section>
@@ -75,17 +74,20 @@
             <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">
                 Process Step {{ idx + 1 }}
             </h3>
-            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan"
-               [innerHTML]="step.step_desc">
+            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan" [innerHTML]="step.step_desc">
             </p>
             @if (step.desc_img_url) {
             <img [src]="step.desc_img_url" class="w-full h-auto object-cover" />
             }
             }
         </div>
+    </section>
 
+    <!-- Results -->
+    <section class="flex flex-col gap-6 md:gap-12">
+        <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">RESULTS & IMPACTS</h3>
         <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan"
-           [innerHTML]="project.content.process.results">
+            [innerHTML]="project.content.process.results">
         </p>
     </section>
 
@@ -96,10 +98,10 @@
         <h2 class="text-smooth_dark text-3xl md:text-4xl lg:text-5xl font-spartan">VISUAL GALLERY</h2>
         <div class="flex flex-col gap-4 sm:gap-7">
             @for (item of project.content.gallery; track $index) {
-            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan"
-                [innerHTML]="item.picture.title"></h3>
+            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan" [innerHTML]="item.picture.title">
+            </h3>
             <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
-                <span [innerHTML]="item.picture.date"></span>, 
+                <span [innerHTML]="item.picture.date"></span>,
                 <span [innerHTML]="item.picture.location"></span><br />
                 <span [innerHTML]="item.picture.desc"></span>
             </p>
