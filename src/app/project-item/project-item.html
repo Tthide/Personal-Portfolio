@@ -1,22 +1,27 @@
-<div class="flex flex-col gap-20">
+@if (project$ | async; as project)
+{<div class="flex flex-col gap-20">
     <!-- Hero -->
     <div class="flex flex-col items-center gap-14 text-center min-h-hero">
         <h1 class="text-smooth_dark text-3xl md:text-5xl lg:text-8xl font-spartan">
-            Project N°{{id}} Title
+            {{ project.content.info_card.title }}
         </h1>
         <div class="grow w-full bg-accent_blue flex items-center justify-center">
-            <p class="w-full max-w-md text-smooth_dark text-lg sm:text-xl font-spartan">
-                PROJECT MAIN PICTURE OVERVIEW<br />/ GAME
-            </p>
+            @if (project.content.info_card.picture_url) {
+            <img [src]="project.content.info_card.picture_url" [alt]="project.content.info_card.title"
+                class="max-h-96 object-contain" />
+            }
+            @else{
+            <span class="text-smooth_dark text-lg sm:text-xl font-spartan">
+                Project Main Picture Placeholder
+            </span>}
         </div>
 
         <div class="hidden lg:flex justify-center items-center w-full">
-            <app-rotating-text-icon [size]="90" [fontSize]="10" [text]="'READ MORE'" [speed]="14" [scale]="2">
-            </app-rotating-text-icon>
+            <app-rotating-text-icon [size]="90" [fontSize]="10" [text]="'READ MORE'" [speed]="14"
+                [scale]="2"></app-rotating-text-icon>
         </div>
     </div>
 
-    <!-- Divider -->
     <div class="w-full border-t-4 border-primary"></div>
 
     <!-- Overview -->
@@ -25,62 +30,37 @@
             PROJECT OVERVIEW
         </h2>
         <p class="flex-1 text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
-            Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis leo
-            semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra augue
-            commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar eros tellus
-            nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac laoreet ligula
-            ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis aliquet finibus, ipsum
-            orci pretium diam, non sodales felis eros ut metus.
-            <br />
-            <br />
-            Suspendisse ut enim eget neque ullamcorper mollis nec in nibh. Pellentesque sagittis mi sit amet enim
-            eleifend molestie. Nulla neque sem, rhoncus congue fringilla at, porttitor vel metus. Phasellus tempor
-            tincidunt consequat. Sed neque lectus, consectetur eu dignissim vestibulum, dignissim id ex. Nullam ut
-            vehicula ex. Ut ut felis tempor, sodales metus id, pulvinar dolor. Cras porttitor sodales luctus. Nullam
-            dictum metus eu euismod venenatis. Integer rutrum, tortor nec convallis aliquam, sem purus pulvinar quam, ac
-            convallis eros nulla sed lorem. Integer id sapien libero. Mauris tempus interdum quam vitae pellentesque.
-            Maecenas eu libero lobortis, condimentum tellus nec, varius est.
+            {{ project.content.project_overview.desc }}
         </p>
     </section>
-
 
     <!-- Objective -->
     <section class="flex flex-col gap-6 md:gap-12">
         <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">OBJECTIVE / CHALLENGE</h3>
         <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
-            Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis leo
-            semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra augue
-            commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar eros tellus
-            nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac laoreet ligula
-            ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis aliquet finibus, ipsum
-            orci pretium diam, non sodales felis eros ut metus.
+            {{ project.content.project_overview.objective }}
         </p>
     </section>
-
 
     <!-- Timeframe / Skills / Tech -->
     <section class="flex flex-col md:flex-row justify-between w-full gap-6">
         <div class="flex-1 flex flex-col gap-4">
             <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">TIMEFRAME</h3>
-            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">4 weeks</p>
+            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
+                {{ project.content.project_overview.timeframe }}
+            </p>
         </div>
         <div class="flex-1 flex flex-col gap-4">
             <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">SKILLS USED</h3>
-            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
-                Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis
-                leo
-                semper massa iaculis vehicula.</p>
+            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
+                {{ project.content.project_overview.skills }}
+            </p>
         </div>
         <div class="flex-1 flex flex-col gap-4">
             <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">TECH INVOLVED</h3>
-            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
-                Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis
-                leo
-                semper massa iaculis vehicula.</p>
+            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
+                {{ project.content.project_overview.tech }}
+            </p>
         </div>
     </section>
 
@@ -89,107 +69,42 @@
     <!-- Process -->
     <section class="flex flex-col gap-10">
         <h2 class="text-smooth_dark text-3xl md:text-4xl lg:text-5xl font-spartan">PROCESS</h2>
-
         <div class="flex flex-col gap-6 md:gap-12">
-            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">Process Step 1</h3>
+            @for (step of project.content.process.steps; track $index; let idx = $index)
+            {
+            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">
+                Process Step {{ idx + 1 }}
+            </h3>
             <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor gravida.
-                Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis
-                leo
-                semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra
-                augue
-                commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar eros
-                tellus
-                nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac laoreet ligula
-                ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis aliquet finibus,
-                ipsum
-                orci pretium diam, non sodales felis eros ut metus.
+                {{ step.step_desc }}
             </p>
+            @if (step.desc_img_url) {
+            <img [src]="step.desc_img_url" class="w-full h-auto object-cover" />
+            }
+            }
         </div>
 
-        <div class="flex flex-col gap-6 md:gap-12">
-            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">Process Step 2</h3>
-            <div class="flex flex-col md:flex-row gap-6 md:gap-7">
-                <p class="flex-1 text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non sem auctor
-                    gravida.
-                    Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis
-                    lobortis leo
-                    semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra
-                    augue
-                    commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar eros
-                    tellus
-                    nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac laoreet
-                    ligula
-                    ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis aliquet finibus,
-                    ipsum
-                    orci pretium diam, non sodales felis eros ut metus.
-                </p>
-                <div
-                    class="flex-1 relative min-h-[200px] md:min-h-[300px] bg-accent_blue flex items-center justify-center">
-                    <span class="absolute text-smooth_dark text-sm sm:text-base md:text-xl font-spartan">
-                        Picture Placeholder
-                    </span>
-                </div>
-            </div>
-        </div>
+        <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
+            {{ project.content.process.results }}
+        </p>
     </section>
 
-    <!-- Results -->
-    <section class="flex flex-col gap-6 md:gap-12">
-        <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">RESULTS & IMPACTS</h3>
-        <div class="flex flex-col gap-2 text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
-            <p class="font-bold">User feedback, KPI, Personal reflection</p>
-            <p class="font-normal"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum magna non
-                sem auctor gravida.
-                Duis pretium turpis nec ex commodo dictum. Mauris euismod nibh quis dolor commodo luctus. Duis lobortis
-                leo
-                semper massa iaculis vehicula. Fusce id dapibus tellus. Phasellus porta euismod ligula, nec viverra
-                augue
-                commodo ac. Maecenas sodales, nisi eget rhoncus blandit, risus nulla dictum ipsum, et pulvinar eros
-                tellus
-                nec orci. Quisque volutpat nulla id erat lobortis luctus. Etiam sodales vehicula dui, ac laoreet ligula
-                ornare vel. Integer nec mauris ut nulla condimentum faucibus. Nam dapibus, ex quis aliquet finibus,
-                ipsum
-                orci pretium diam, non sodales felis eros ut metus.</p>
-        </div>
-    </section>
-
-    <!-- Divider -->
     <div class="w-full border-t-4 border-primary"></div>
 
-    <!-- Visual Gallery -->
+    <!-- Gallery -->
     <section class="flex flex-col gap-10">
         <h2 class="text-smooth_dark text-3xl md:text-4xl lg:text-5xl font-spartan">VISUAL GALLERY</h2>
-
-        <!-- Gallery Item -->
         <div class="flex flex-col gap-4 sm:gap-7">
-            <div class="flex flex-col gap-1.5 sm:gap-2.5">
-                <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">Picture Title</h3>
-                <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
-                    Picture Title, date, City/Context, additional information
-                </p>
-            </div>
-            <div class="w-full h-40 sm:h-48 relative bg-accent_blue flex items-center justify-center">
-                <span class="absolute text-smooth_dark text-sm sm:text-base md:text-xl font-spartan">
-                    Picture Placeholder
-                </span>
-            </div>
-        </div>
-
-        <!-- Another Gallery Item -->
-        <div class="flex flex-col gap-4 sm:gap-7">
-            <div class="flex flex-col gap-1.5 sm:gap-2.5">
-                <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">Picture Title</h3>
-                <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
-                    Picture Title, date, City/Context, additional information
-                </p>
-            </div>
-            <div class="w-full h-40 sm:h-48 relative bg-accent_blue flex items-center justify-center">
-                <span class="absolute text-smooth_dark text-sm sm:text-base md:text-xl font-spartan">
-                    Picture Placeholder
-                </span>
-            </div>
+            @for (item of project.content.gallery; track $index) {
+            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">{{ item.picture.title }}</h3>
+            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan">
+                {{ item.picture.date }}, {{ item.picture.location }}<br />
+                {{ item.picture.desc }}
+            </p>
+            @if (item.picture.url) {
+            <img [src]="item.picture.url" class="w-full h-40 sm:h-48 object-cover" />
+            }
+            }
         </div>
     </section>
-</div>
+</div>}

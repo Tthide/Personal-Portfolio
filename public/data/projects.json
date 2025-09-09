@@ -15,33 +15,33 @@
                     "picture_url": ""
                 },
                 "project_overview": {
-                    "desc": "",
-                    "objective": "",
-                    "timeframe": "",
-                    "skills": "",
-                    "tech": ""
+                    "desc": "Project overview...",
+                    "objective": "Support local artists",
+                    "timeframe": "2023",
+                    "skills": "UX Research, UI Design",
+                    "tech": "Angular, Tailwind"
                 },
                 "process": {
                     "steps": [
                         {
-                            "step_desc": "",
-                            "desc_img_url": ""
+                            "step_desc": "Ideation",
+                            "desc_img_url": "assets/images/step1.png"
                         },
                         {
-                            "step_desc": "",
-                            "desc_img_url": ""
+                            "step_desc": "Prototyping",
+                            "desc_img_url": "assets/images/step2.png"
                         }
                     ],
-                    "results": ""
+                    "results": "Successful testing with 50+ users"
                 },
                 "gallery": [
                     {
                         "picture": {
-                            "title": "",
-                            "url": "",
-                            "date": "",
-                            "location": "",
-                            "desc": ""
+                            "title": "Prototype showcase",
+                            "url": "assets/images/gallery1.png",
+                            "date": "2023-04-10",
+                            "location": "Berlin",
+                            "desc": "Our first public demo"
                         }
                     }
                 ]
@@ -51,7 +51,7 @@
             "id": 1,
             "content": {
                 "info_card": {
-                    "title": "KISS",
+                    "title": "NODE WARS",
                     "subtitle": "Interactive Tangible Design",
                     "desc": "A Public Visual & Interactive Library to discover & support local Artists through physical yet digital artbooks.",
                     "key_words": [
