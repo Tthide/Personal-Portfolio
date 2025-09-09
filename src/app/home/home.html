@@ -3,7 +3,8 @@
   <div class="w-full flex flex-col xl:flex-row grow justify-around items-center gap-6 md:gap-0 min-h-hero  ">
     <!-- Left Content -->
     <div class="flex-1 flex flex-col gap-4 text-center md:text-left">
-      <h1 class="text-accent_purple text-4xl md:text-6xl font-montserrat font-extrabold">Engineering for, with, and as people</h1>
+      <h1 class="text-accent_purple text-4xl md:text-6xl font-montserrat font-extrabold">Engineering for, with, and as
+        people</h1>
       <p class="text-smooth_dark text-xl font-spartan text-justify">
         Humanity is as vast and complex as the night sky. With the right tools and thoughtful design, we can connect the
         stars into constellations that are both meaningful and beautiful. </p>
@@ -23,62 +24,12 @@
     </div>
   </div>
 
-  <!-- Works Section -->
+  <!-- Projects Section -->
   <div class="w-full flex flex-col items-center gap-10">
     <div class="w-full py-2.5 bg-primary flex justify-center items-center">
       <h2 class="text-light text-3xl md:text-6xl font-bold tracking-[6px] md:tracking-[12.8px]">Featured Works</h2>
     </div>
 
-    <!-- Project Card -->
-    <div
-      class="w-full p-3.5 bg-accent_blue outline outline-1 outline-primary flex flex-col md:flex-row gap-6 md:gap-10">
-      <div class="flex-1 relative flex items-center">
-        <div class="w-full h-48 md:h-full bg-zinc-300"></div>
-        <span
-          class="absolute left-1/2 md:left-[330px] top-1/2 md:top-[285px] transform -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 text-smooth_dark text-base md:text-xl">
-          Picture Placeholder
-        </span>
-      </div>
-      <div class="w-full md:w-96 h-auto px-4 md:px-7 py-10 md:py-20 bg-light flex flex-col gap-6 md:gap-9">
-        <h3 class="text-smooth_dark text-3xl md:text-6xl font-spartan">Title</h3>
-        <h4 class="text-smooth_dark text-xl md:text-3xl font-spartan">Subtitle (type of project)</h4>
-        <p class="text-smooth_dark text-base md:text-xl font-spartan">
-          Short Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-        </p>
-        <p class="text-smooth_dark text-base md:text-xl font-spartan">
-          Key Words - Lorem ipsum dolor sit amet.
-        </p>
-        <a [routerLink]="['/project', 1]"
-          class="px-6 py-2 md:px-8 md:py-3 bg-light shadow-md flex justify-center items-center text-accent_purple text-base md:text-xl font-bold">
-          Read More
-        </a>
-      </div>
-    </div>
-
-    <!-- Duplicate Project Card -->
-    <div
-      class="w-full p-3.5 bg-accent_blue outline outline-1 outline-primary flex flex-col md:flex-row gap-6 md:gap-10">
-      <div class="flex-1 relative flex items-center">
-        <div class="w-full h-48 md:h-full bg-zinc-300"></div>
-        <span
-          class="absolute left-1/2 md:left-[330px] top-1/2 md:top-[285px] transform -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 text-smooth_dark text-base md:text-xl">
-          Picture Placeholder
-        </span>
-      </div>
-      <div class="w-full md:w-96 h-auto px-4 md:px-7 py-10 md:py-20 bg-light flex flex-col gap-6 md:gap-9">
-        <h3 class="text-smooth_dark text-3xl md:text-6xl font-spartan">Title</h3>
-        <h4 class="text-smooth_dark text-xl md:text-3xl font-spartan">Subtitle (type of project)</h4>
-        <p class="text-smooth_dark text-base md:text-xl font-spartan">
-          Short Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-        </p>
-        <p class="text-smooth_dark text-base md:text-xl font-spartan">
-          Key Words - Lorem ipsum dolor sit amet.
-        </p>
-        <a [routerLink]="['/project', 2]"
-          class="px-6 py-2 md:px-8 md:py-3 bg-light shadow-md flex justify-center items-center text-accent_purple text-base md:text-xl font-bold">
-          Read More
-        </a>
-      </div>
-    </div>
+    <app-project-list class="w-full flex flex-col items-center gap-10"/>
   </div>
 </div>
