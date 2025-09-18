@@ -1,13 +1,19 @@
 <div class=" flex flex-col items-center gap-20 font-spartan">
   <!-- Hero Section-->
   <!-- Background layer -->
-  <div class="absolute inset-0 bg-[url('/pexels-umkreisel-app-956981.jpg')] bg-cover bg-center"></div>
-
+  <div class="absolute inset-0">
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-[url('/pexels-umkreisel-app-956981.jpg')] bg-cover bg-center"></div>
+    <!-- Gradient overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b [background:linear-gradient(180deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0.5)_20%,rgba(0,0,0,0.2)_65%,rgba(249,245,238,0.2)_95%,rgba(249,245,238,1)_100%)]">
+    </div>
+  </div>
   <!-- Content layer -->
-  <div class="relative w-full flex flex-col xl:flex-row grow justify-around gap-6 md:gap-0 min-h-hero">
+  <div class="relative w-full flex flex-col lg:flex-row grow justify-around gap-6 md:gap-0 min-h-hero">
     <!-- Left Content -->
     <div
-      class="flex grow xl:max-w-[50%] flex-col gap-4 justify-center bg-light bg-opacity-80 text-center sm:text-left p-6">
+      class="flex grow lg:max-w-[50%] flex-col gap-4 justify-center bg-light bg-opacity-80 text-center sm:text-left p-6">
       <h1 class="text-accent_purple text-4xl md:text-6xl font-montserrat font-extrabold">
         Engineering for, with, and as people
       </h1>
