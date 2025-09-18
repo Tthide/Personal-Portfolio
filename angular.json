@@ -26,7 +26,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
@@ -63,9 +64,10 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          
           "builder": "@angular/build:dev-server",
-           "options": { "liveReload": true },
+          "options": {
+            "liveReload": true
+          },
           "configurations": {
             "production": {
               "buildTarget": "portfolio-angular:build:production"
@@ -91,7 +93,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
