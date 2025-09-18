@@ -10,27 +10,27 @@
     </div>
   </div>
   <!-- Content layer -->
-  <div class="relative w-full flex flex-col lg:flex-row grow justify-around gap-6 md:gap-0 min-h-hero">
+  <div class="relative w-full flex grow flex-col lg:flex-row items-start xl:justify-around gap-6 md:gap-0 min-h-hero">
     <!-- Left Content -->
     <div
-      class="flex grow lg:max-w-[50%] flex-col gap-4 justify-center bg-light bg-opacity-80 text-center sm:text-left p-6">
-      <h1 class="text-accent_purple text-4xl md:text-6xl font-montserrat font-extrabold">
+      class="flex-1 grow lg:self-stretch flex lg:max-w-[50%]  flex-col gap-4 justify-center rounded-md bg-light/85 text-center sm:text-left p-6">
+      <h1 class="text-accent_purple text-4xl md:text-5xl lg:text-6xl font-montserrat font-extrabold">
         Engineering for, with, and as people
       </h1>
       <p class="text-smooth_dark text-xl font-spartan text-justify">
         Humanity is as vast and complex as the night sky. With the right tools and thoughtful design, we can connect the
         stars into constellations that are both meaningful and beautiful. </p>
-      <div class="w-full md:w-70 h-32 md:h-40 flex items-center justify-center text-sm md:text-base">
+      <div class="hidden lg:flex w-full md:w-70 h-32 md:h-40 items-center justify-center text-sm md:text-base">
         <app-rotating-text-icon [size]="120" [fontSize]="10" [text]="'SCROLL DOWN'" [speed]="14"
           [scale]="3"></app-rotating-text-icon>
       </div>
     </div>
 
     <!-- Divider (hidden on mobile) -->
-    <div class="hidden xl:block self-stretch w-[5px] bg-primary mx-6 opacity-0"></div>
+    <div class="hidden lg:block self-stretch w-[5px] bg-primary mx-6 opacity-0"></div>
 
     <!-- Right Content -->
-    <div class="hidden xl:flex flex-1 self-stretch grow items-center mt-6 md:mt-0 opacity-0">
+    <div class="lg:flex flex-1 self-stretch grow items-center mt-6 md:mt-0 opacity-0">
       <div class="w-full grow lg:h-full bg-zinc-300 flex items-center justify-center">
         Navigation Game
       </div>
