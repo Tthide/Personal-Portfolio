@@ -20,7 +20,8 @@ export interface ProjectOverview {
 }
 
 export interface ProcessStep {
-    step_desc: string;
+    step_title: string;
+    content:string;
     desc_img_url: string;
 }
 

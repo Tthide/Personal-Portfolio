@@ -1,7 +1,7 @@
 @if (project$ | async; as project)
 {<div class="flex flex-col gap-20">
     <!-- Hero -->
-    <div class="flex flex-col items-center gap-14 text-center min-h-hero lg:min-h-hero-lg">
+    <section class="flex flex-col items-center gap-14 text-center min-h-hero lg:min-h-hero-lg">
         <h1 class="text-smooth_dark text-5xl lg:text-8xl font-spartan" [innerHTML]="project.content.info_card.title">
         </h1>
         <div class="grow w-full bg-accent_blue flex items-center justify-center">
@@ -19,7 +19,7 @@
             <app-rotating-text-icon [size]="90" [fontSize]="10" [text]="'READ MORE'" [speed]="14"
                 [scale]="2"></app-rotating-text-icon>
         </div>
-    </div>
+    </section>
 
     <div class="w-full border-t-4 border-primary"></div>
 
@@ -66,19 +66,19 @@
     <div class="w-full border-t-4 border-primary"></div>
 
     <!-- Process -->
-    <section class="flex flex-col gap-10">
+    <section class="flex flex-col gap-8 lg:gap-30">
         <h2 class="text-smooth_dark text-3xl md:text-4xl lg:text-5xl font-spartan">PROCESS</h2>
-        <div class="flex flex-col gap-6 md:gap-12">
-            @for (step of project.content.process.steps; track $index; let idx = $index)
-            {
-            <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">
-                Process Step {{ idx + 1 }}
-            </h3>
-            <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan" [innerHTML]="step.step_desc">
-            </p>
-            @if (step.desc_img_url) {
-            <img [src]="step.desc_img_url" class="w-full h-auto object-cover" />
-            }
+        <div class="flex flex-col gap-8 lg:gap-40">
+            @for (step of project.content.process.steps; track $index; let idx = $index) {
+            <div class="flex flex-col gap-3">
+                <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">
+                    Process Step {{ idx + 1 }} - {{ step.step_title }}
+                </h3>
+                <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan" [innerHTML]="step.content"></p>
+                @if (step.desc_img_url) {
+                <img [src]="step.desc_img_url" class="w-full max-h-[70dvh] object-cover" />
+                }
+            </div>
             }
         </div>
     </section>

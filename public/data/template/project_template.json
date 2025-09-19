@@ -18,11 +18,11 @@
         "process": {
             "steps": [
                 {
-                    "step_desc": "",
+                    "step_title": "",
                     "desc_img_url": ""
                 },
                 {
-                    "step_desc": "",
+                    "step_title": "",
                     "desc_img_url": ""
                 }
             ],
