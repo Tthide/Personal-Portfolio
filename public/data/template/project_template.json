@@ -6,7 +6,10 @@
             "subtitle": "",
             "desc": "",
             "key_words": [],
-            "picture_url": ""
+            "picture": {
+                "url": "",
+                "alt": ""
+            }
         },
         "project_overview": {
             "desc": "",
@@ -19,11 +22,19 @@
             "steps": [
                 {
                     "step_title": "",
-                    "desc_img_url": ""
+                    "content": "",
+                    "picture": {
+                        "url": "",
+                        "alt": ""
+                    }
                 },
                 {
                     "step_title": "",
-                    "desc_img_url": ""
+                    "content": "",
+                    "picture": {
+                        "url": "",
+                        "alt": ""
+                    }
                 }
             ],
             "results": ""

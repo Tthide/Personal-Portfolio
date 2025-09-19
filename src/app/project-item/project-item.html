@@ -5,8 +5,8 @@
         <h1 class="text-smooth_dark text-5xl lg:text-8xl font-spartan" [innerHTML]="project.content.info_card.title">
         </h1>
         <div class="grow w-full bg-accent_blue flex items-center justify-center">
-            @if (project.content.info_card.picture_url) {
-            <img [src]="project.content.info_card.picture_url" [alt]="project.content.info_card.title"
+            @if (project.content.info_card.picture.url) {
+            <img [src]="project.content.info_card.picture.url" [alt]="project.content.info_card.picture.alt"
                 class="max-h-96 object-contain" />
             }
             @else{
@@ -75,11 +75,12 @@
                     Process Step {{ idx + 1 }} - {{ step.step_title }}
                 </h3>
                 <p class="text-smooth_dark text-base sm:text-lg md:text-xl font-spartan" [innerHTML]="step.content"></p>
-                @if (step.desc_img_url) {
-                <img [src]="step.desc_img_url" class="w-full max-h-[70dvh] object-cover" />
+                @if (step.picture) {
+                <img [src]="step.picture.url" [alt]="step.picture.alt" class="w-full max-h-[70dvh] object-cover" />
                 }
             </div>
             }
+
         </div>
     </section>
 
@@ -106,7 +107,7 @@
                 <span [innerHTML]="item.picture.desc"></span>
             </p>
             @if (item.picture.url) {
-            <img [src]="item.picture.url" class="w-full h-40 sm:h-48 object-cover" />
+            <img [src]="item.picture.url" class="w-full h-40 sm:h-48 object-cover" [alt]="item.picture.alt" />
             }
             }
         </div>

@@ -8,9 +8,13 @@ export interface InfoCard {
     subtitle: string;
     desc: string; 
     key_words: string[];
-    picture_url: string;
+    picture: Picture;
 }
 
+export interface Picture {
+    url: string;
+    alt:string;
+}
 export interface ProjectOverview {
     desc: string;
     objective: string;
@@ -22,7 +26,7 @@ export interface ProjectOverview {
 export interface ProcessStep {
     step_title: string;
     content:string;
-    desc_img_url: string;
+    picture: Picture;
 }
 
 export interface Process {
@@ -37,6 +41,7 @@ export interface GalleryItem {
         date: string;
         location: string;
         desc: string;
+        alt:string;
     };
 }
 
