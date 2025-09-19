@@ -1,29 +1,28 @@
 <!-- Project List Component Template -->
-<div class="w-full flex flex-col items-center gap-10">
+<div class="w-full flex flex-col items-center gap-7 lg:gap-14">
     @defer {
     @for (project of projects; track $index) {
     <div
-        class="w-full p-3.5 bg-accent_blue outline outline-1 outline-primary rounded-lg flex flex-col md:flex-row gap-4 md:gap-10">
+        class="w-full p-3.5 bg-accent_blue outline outline-1 outline-primary rounded-lg flex flex-col md:flex-row gap-4 lg:gap-10">
         <!-- Image / Picture Placeholder -->
-        <div class="flex-1 relative flex items-center">
-            <div class="w-full h-48 md:h-full bg-zinc-300"></div>
+        <div class="flex-1 relative flex items-center justify-center bg-zinc-300">
             <span
-                class="absolute left-1/2 md:left-[330px] top-1/2 md:top-[285px] transform -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 text-smooth_dark text-base md:text-xl">
+                class=" text-smooth_dark text-base lg:text-xl">
                 Picture Placeholder
             </span>
         </div>
 
         <!-- Project Info -->
-        <div class="w-full md:w-96 h-auto px-4 md:px-7 py-10 md:py-20 rounded-lg bg-light flex flex-col gap-4 md:gap-9">
-            <h3 class="text-accent_purple text-3xl md:text-6xl font-spartan">
+        <div class="w-full md:w-1/2 lg:w-[33%] h-auto px-4 lg:px-7 py-7 lg:py-20 rounded-lg bg-light flex flex-col gap-2 lg:gap-9">
+            <h3 class="text-accent_purple text-3xl lg:text-6xl font-spartan">
                 {{ project.content.info_card.title }}
             </h3>
 
-            <h4 class="text-smooth_dark text-xl md:text-3xl font-spartan">
+            <h4 class="text-smooth_dark text-xl lg:text-3xl font-spartan">
                 {{ project.content.info_card.subtitle }}
             </h4>
 
-            <p class="text-smooth_dark text-base md:text-xl font-spartan">
+            <p class="text-smooth_dark text-base lg:text-xl font-spartan">
                 {{ project.content.info_card.desc }}
             </p>
 
@@ -31,7 +30,7 @@
             <div class="flex flex-wrap gap-2">
                 @for (keyword of project.content.info_card.key_words; track $index) {
                 <span
-                    class="text-white text-sm md:text-base px-3 py-1 rounded-full shadow-sm hover:shadow-md transition-all duration-200 {{ getChipColor($index) }}">
+                    class="text-white text-sm lg:text-base px-3 py-1 rounded-full shadow-sm hover:shadow-lg transition-all duration-200 {{ getChipColor($index) }}">
                     {{ keyword }}
                 </span>
                 }
@@ -39,7 +38,7 @@
 
             <!-- Read More Button -->
             <a [routerLink]="['/project', project.id]"
-                class="px-6 py-2 md:px-8 md:py-3 text-base md:text-xl font-bold flex justify-center items-center bg-accent_purple shadow-md text-light rounded-lg hover:bg-white hover:outline hover:outline-2 hover:outline-accent_purple hover:text-accent_purple transition">
+                class="px-6 py-2 lg:px-8 lg:py-3 text-base lg:text-xl font-bold flex justify-center items-center bg-accent_purple shadow-lg text-light rounded-lg hover:bg-white hover:outline hover:outline-2 hover:outline-accent_purple hover:text-accent_purple transition">
                 Read More
             </a>
         </div>
