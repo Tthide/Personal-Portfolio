@@ -11,7 +11,7 @@ import { RouterOutlet } from '@angular/router';
     <div class="flex flex-col bg-light min-h-dvh">    
       <app-header />
 
-      <main class=" grow px-6 py-10  lg:py-16 md:px-[7%] lg:px-[10%]">
+      <main class=" grow px-6 py-5 lg:py-16 md:px-[7%] lg:px-[10%]">
         <router-outlet />
       </main>
       <app-footer class="px-0 md:px-[7%] lg:px-[10%]" />

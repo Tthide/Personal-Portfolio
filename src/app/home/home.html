@@ -1,25 +1,25 @@
-<div class=" flex flex-col items-center gap-20 font-spartan">
-  <!-- Hero Section-->
-  <!-- Background layer -->
-  <div class="absolute inset-0">
-    <!-- Background image -->
+<div class="h-full flex flex-col items-center gap-10 lg:gap-20 font-spartan">
+  <!-- Background Layer (inside hero, respects horizontal padding) -->
+  <div class="absolute inset-0 px-6 sm:px-12 lg:px-24">
     <div class="absolute inset-0 bg-[url('/pexels-umkreisel-app-956981.jpg')] bg-cover bg-center"></div>
-    <!-- Gradient overlay -->
     <div
       class="absolute inset-0 bg-gradient-to-b [background:linear-gradient(180deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0.5)_20%,rgba(0,0,0,0.2)_65%,rgba(249,245,238,0.2)_95%,rgba(249,245,238,1)_100%)]">
     </div>
   </div>
-  <!-- Content layer -->
-  <div class="relative w-full flex grow flex-col lg:flex-row items-start xl:justify-around gap-6 md:gap-0 min-h-hero">
+  <!-- Hero Section -->
+  <section class="relative min-h-hero lg:min-h-hero-lg flex flex-col lg:flex-row justify-center items-start xl:items-center xl:justify-around gap-6 md:gap-0">
+
     <!-- Left Content -->
     <div
-      class="flex-1 grow lg:self-stretch flex lg:max-w-[50%]  flex-col gap-4 justify-center rounded-md bg-light/85 text-center sm:text-left p-6">
+      class="relative max-h-[60dvh] flex-1 flex flex-col gap-4 justify-evenly p-6 rounded-md bg-light/80 text-center sm:text-left">
       <h1 class="text-accent_purple text-4xl md:text-5xl lg:text-6xl font-montserrat font-extrabold">
         Engineering for, with, and as people
       </h1>
       <p class="text-smooth_dark text-xl font-spartan text-justify">
         Humanity is as vast and complex as the night sky. With the right tools and thoughtful design, we can connect the
-        stars into constellations that are both meaningful and beautiful. </p>
+        stars into constellations that are both meaningful and beautiful.
+      </p>
+
       <div class="hidden lg:flex w-full md:w-70 h-32 md:h-40 items-center justify-center text-sm md:text-base">
         <app-rotating-text-icon [size]="120" [fontSize]="10" [text]="'SCROLL DOWN'" [speed]="14"
           [scale]="3"></app-rotating-text-icon>
@@ -30,21 +30,22 @@
     <div class="hidden lg:block self-stretch w-[5px] bg-primary mx-6 opacity-0"></div>
 
     <!-- Right Content -->
-    <div class="lg:flex flex-1 self-stretch grow items-center mt-6 md:mt-0 opacity-0">
+    <div class="hidden lg:flex flex-1 self-stretch grow items-center mt-6 md:mt-0 opacity-0">
       <div class="w-full grow lg:h-full bg-zinc-300 flex items-center justify-center">
         Navigation Game
       </div>
     </div>
-  </div>
-
-
+  </section>
 
   <!-- Projects Section -->
-  <div class="w-full flex flex-col items-center gap-10">
+  <section class="w-full flex flex-col items-center gap-10">
     <div class="w-full py-2.5 bg-primary flex justify-center items-center text-center">
-      <h2 class="text-light text-3xl md:text-6xl font-bold tracking-[6px] md:tracking-[12.8px]">Featured Works</h2>
+      <h2 class="text-light text-3xl md:text-6xl font-bold tracking-[6px] md:tracking-[12.8px]">
+        Featured Works
+      </h2>
     </div>
 
     <app-project-list />
-  </div>
+  </section>
+
 </div>
