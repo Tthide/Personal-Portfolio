@@ -8,10 +8,18 @@
 
         <!-- Nav links -->
         @for (link of navLinks; track $index) {
+            <!--Edge case for the resume-->
+        @if (link.href) {
+        <a [href]="link.href" target="_blank" class="grow text-center transition-colors mb-4 md:mb-0">
+            {{ link.label }}
+        </a>}
+        @else {
         <a [routerLink]="link.path" routerLinkActive="text-accent_blue"
-            [routerLinkActiveOptions]="{ exact: link.exact || false }" class="grow text-center transition-colors mb-4 md:mb-0">
+            [routerLinkActiveOptions]="{ exact: link.exact || false }"
+            class="grow text-center transition-colors mb-4 md:mb-0">
             {{ link.label }}
         </a>
+        }
         }
         <!-- Social links -->
         @for (social of socialLinks; track $index) {

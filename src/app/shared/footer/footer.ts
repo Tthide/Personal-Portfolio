@@ -12,7 +12,7 @@ export class FooterComponent {
   navLinks = [
     { path: '/home', label: 'HOME', exact: true },
     { path: '/about', label: 'ABOUT' },
-    { path: '/resume', label: 'RESUME' },
+    { path: '/resume', label: 'RESUME' , href:"./CV_Borde_Thibault.pdf"},
     { path: '/contact', label: 'CONTACT' },
   ];
 
