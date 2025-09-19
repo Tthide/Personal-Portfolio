@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       minHeight: {
-        'hero': 'calc(100dvh - 14rem)',
+        'hero-lg': 'calc(100dvh - 14rem)',   // large screen
+        'hero': 'calc(100dvh - 8rem)',      // default
       },
       keyframes: {
         shake: {

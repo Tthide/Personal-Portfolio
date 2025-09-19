@@ -1,7 +1,7 @@
 @if (project$ | async; as project)
 {<div class="flex flex-col gap-20">
     <!-- Hero -->
-    <div class="flex flex-col items-center gap-14 text-center min-h-hero">
+    <div class="flex flex-col items-center gap-14 text-center min-h-hero lg:min-h-hero-lg">
         <h1 class="text-smooth_dark text-5xl lg:text-8xl font-spartan" [innerHTML]="project.content.info_card.title">
         </h1>
         <div class="grow w-full bg-accent_blue flex items-center justify-center">
