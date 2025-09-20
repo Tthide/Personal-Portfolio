@@ -6,6 +6,10 @@ module.exports = {
         'hero-lg': 'calc(100dvh - 14rem)',   // large screen
         'hero': 'calc(100dvh - 8rem)',      // default
       },
+      height: {
+        'hero-lg': 'calc(100dvh - 14rem)',   // large screen
+        'hero': 'calc(100dvh - 8rem)',      // default
+      },
       keyframes: {
         shake: {
           '0%, 100%': { transform: 'translateX(0)' },

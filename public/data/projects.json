@@ -4,7 +4,7 @@
             "id": 0,
             "content": {
                 "info_card": {
-                    "title": "KISS - Kunstfluss in Seestadt",
+                    "title": "KISS - Kunstbibliothek in Seestadt",
                     "subtitle": "Interactive Tangible Design",
                     "desc": "A Public Visual & Interactive Library to discover & support local Artists through physical yet digital artbooks.",
                     "key_words": [
@@ -13,7 +13,7 @@
                         "User Studies"
                     ],
                     "picture": {
-                        "url": "",
+                        "url": "./data/gallery/0/info_card_kiss.png",
                         "alt": ""
                     }
                 },
@@ -127,7 +127,10 @@
                         "Prototyping",
                         "User Studies"
                     ],
-                    "picture_url": ""
+                    "picture": {
+                        "url": "./data/gallery/0/info_card_kiss.png",
+                        "alt": ""
+                    }
                 },
                 "project_overview": {
                     "desc": "",

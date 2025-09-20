@@ -1,25 +1,34 @@
 @if (project$ | async; as project)
 {<div class="flex flex-col gap-20">
     <!-- Hero -->
-    <section class="flex flex-col items-center gap-14 text-center min-h-hero lg:min-h-hero-lg">
-        <h1 class="text-smooth_dark text-5xl lg:text-8xl font-spartan" [innerHTML]="project.content.info_card.title">
-        </h1>
-        <div class="grow w-full bg-accent_blue flex items-center justify-center">
+    <section class="flex flex-col items-center text-center h-hero lg:h-hero-lg">
+        <!-- Title -->
+        <h1 class="text-smooth_dark text-5xl lg:text-8xl font-spartan mb-8"
+            [innerHTML]="project.content.info_card.title"></h1>
+
+        <!-- Middle container: img + icon on lg+, img only on smaller screens -->
+        <div class="flex-1 flex flex-col lg:flex-row items-center justify-center w-full overflow-hidden gap-8">
+            <!-- Picture -->
             @if (project.content.info_card.picture.url) {
             <img [src]="project.content.info_card.picture.url" [alt]="project.content.info_card.picture.alt"
-                class="max-h-96 object-contain" />
+                class="max-w-full max-h-full object-contain lg:flex-1" />
             }
-            @else{
+            @else {
             <span class="text-smooth_dark text-lg sm:text-xl font-spartan">
                 Project Main Picture Placeholder
-            </span>}
-        </div>
+            </span>
+            }
 
-        <div class="hidden lg:flex justify-center items-center w-full">
-            <app-rotating-text-icon [size]="90" [fontSize]="10" [text]="'READ MORE'" [speed]="14"
-                [scale]="2"></app-rotating-text-icon>
+            <!-- Rotating icon -->
+            <div class="hidden lg:flex justify-center items-center lg:flex-1">
+                <app-rotating-text-icon [size]="90" [fontSize]="10" [text]="'READ MORE'" [speed]="14"
+                    [scale]="2"></app-rotating-text-icon>
+            </div>
         </div>
     </section>
+
+
+
 
     <div class="w-full border-t-4 border-primary"></div>
 
