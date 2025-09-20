@@ -3,18 +3,30 @@
     @defer {
     @for (project of projects; track $index) {
     <div
-        class="w-full p-3.5 bg-accent_blue outline outline-1 outline-primary rounded-lg flex flex-col md:flex-row gap-4 lg:gap-10">
+        class="w-full p-3.5 lg:p-8 bg-accent_blue outline outline-1 outline-primary rounded-lg flex flex-col md:flex-row gap-4 items-stretch">
+
+
         <!-- Image / Picture Placeholder -->
-        <div class="flex-1 relative flex items-center justify-center bg-zinc-300">
-            <span
-                class=" text-smooth_dark text-base lg:text-xl">
-                Picture Placeholder
-            </span>
+        <div class="flex-1 flex items-center justify-center bg-light rounded-lg">
+            <div class="w-full h-full flex items-center justify-center">
+                @if (project.content.info_card.picture.url) {
+                <img [src]="project.content.info_card.picture.url" [alt]="project.content.info_card.picture.alt"
+                    class="object-contain max-h-full max-w-full" />
+                }
+                @else {
+                <span class="text-smooth_dark text-lg sm:text-xl font-spartan text-center">
+                    Project Main Picture Placeholder
+                </span>
+                }
+            </div>
         </div>
 
+
         <!-- Project Info -->
-        <div class="w-full md:w-1/2 lg:w-[33%] h-auto px-4 lg:px-7 py-7 lg:py-20 rounded-lg bg-light flex flex-col gap-2 lg:gap-9">
-            <h3 class="text-accent_purple text-3xl lg:text-6xl font-spartan">
+        <div
+            class="w-full md:w-1/2 lg:w-[33%] h-full px-4 lg:px-7 py-7 lg:py-20 rounded-lg bg-light flex flex-col gap-2 lg:gap-9">
+            <h3 class="text-accent_purple text-3xl lg:text-6xl font-spartan break-words line-clamp-2"
+                [title]="project.content.info_card.title">
                 {{ project.content.info_card.title }}
             </h3>
 
