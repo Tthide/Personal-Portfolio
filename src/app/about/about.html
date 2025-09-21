@@ -1,14 +1,12 @@
-<div class="flex flex-col items-center gap-32">
+<div class="flex flex-col items-center gap-16 lg:gap-32">
 
     <!-- Hero Row -->
-    <div
-        class="w-full flex flex-col lg:min-h-hero-lg gap-14">
+    <section class="w-full flex flex-col md:flex-row h-hero lg:h-hero-lg gap-7">
 
         <!-- Text Intro -->
-        <div class="w-full grow flex flex-col md:flex-row justify-center md:justify-evenly items-center gap-10 md:gap-20">
-            <div class="w-full md:w-1/2">
-
-                <h1 class="text-3xl md:text-4xl font-spartan leading-snug">
+        <div class="w-full md:w-[70%] lg:w-1/2 shrink sm:shrink-0 flex flex-col justify-center md:justify-evenly items-center gap-8">
+            <div class="w-full">
+                <h1 class="text-3xl lg:text-4xl font-spartan leading-snug">
                     <span class="text-accent_purple font-bold">UX Engineer</span>
                     <span class="text-smooth_dark font-normal"> with a Double Degree EMSE & TU Wien and specialization
                         in
@@ -21,24 +19,27 @@
                 </p>
             </div>
 
-            <!-- Picture -->
-            <div class="relative w-full md:w-1/2 h-64 md:h-96 bg-zinc-300 flex items-center justify-center">
-                <span class="text-smooth_dark text-xl font-normal font-spartan">Picture of me</span>
+            <div class="hidden lg:flex justify-center items-center w-full">
+                <app-rotating-text-icon [size]="90" [fontSize]="10" [text]="'READ MORE'" [speed]="14" [scale]="2">
+                </app-rotating-text-icon>
             </div>
         </div>
 
+        <!-- Picture -->
+        <div aria-hidden="true" class="flex-1 grow flex items-center justify-center overflow-hidden rounded-lg">
 
-        <div class="flex justify-center items-center w-full grow">
-            <app-rotating-text-icon [size]="90" [fontSize]="10" [text]="'READ MORE'" [speed]="14" [scale]="2">
-            </app-rotating-text-icon>
+            <img src="./about_picture.jpg" alt="Picture of me" class="max-w-full max-h-full object-contain lg:flex-1" />
         </div>
-    </div>
+
+
+
+    </section>
 
     <!-- Divider -->
-    <div class="hidden md:block h-1 bg-accent_purple self-stretch"></div>
+    <div class="block h-1 bg-accent_purple self-stretch"></div>
 
     <!-- Main Content -->
-    <div class="w-full flex flex-col gap-16 md:gap-24">
+    <section class="w-full flex flex-col gap-6 lg:gap-24">
 
         <!-- About Me -->
         <section class="flex flex-col gap-4">
@@ -89,7 +90,7 @@
         <!-- My Journey / Beyond the Screen -->
         <div class="flex flex-col md:flex-row w-full gap-10">
             <!-- My Journey -->
-            <div class="flex-1 flex flex-col gap-4">
+            <section class="flex-1 flex flex-col gap-4">
                 <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">My Journey</h2>
                 <ul class="text-smooth_dark text-lg md:text-2xl font-normal font-spartan space-y-3">
                     <li class="flex gap-3 items-start">
@@ -131,13 +132,13 @@
                         </span>
                     </li>
                 </ul>
-            </div>
+            </section>
 
             <!-- Divider -->
             <div class="hidden md:block w-1 bg-accent_purple self-stretch"></div>
 
             <!-- Beyond the Screen -->
-            <div class="flex-1 flex flex-col gap-4">
+            <section class="flex-1 flex flex-col gap-4">
                 <h2 class="text-accent_purple text-3xl md:text-4xl font-semibold font-spartan">Beyond the screen
                 </h2>
                 <ul class="text-smooth_dark text-lg md:text-2xl font-normal font-spartan space-y-3">
@@ -191,11 +192,11 @@
                         </span>
                     </li>
                 </ul>
-            </div>
+            </section>
         </div>
 
         <!-- Contact Section -->
-        <div class="flex flex-col md:flex-row w-full">
+        <section class="flex flex-col md:flex-row w-full">
 
             <!--Contact Info and instructions-->
             <div class="flex flex-col gap-4 md:w-1/2">
@@ -239,8 +240,8 @@
             <div class="md:w-1/2">
                 <app-contact-form></app-contact-form>
             </div>
-        </div>
+        </section>
 
-    </div>
+    </section>
 
 </div>
