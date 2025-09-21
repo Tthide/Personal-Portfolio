@@ -13,7 +13,7 @@
                         "User Studies"
                     ],
                     "picture": {
-                        "url": "./data/gallery/0/info_card_kiss.png",
+                        "url": "./gallery/0/info_card_kiss.png",
                         "alt": ""
                     }
                 },
@@ -46,7 +46,7 @@
                             "step_title": "Ideation: well... what do we build now? ⚟",
                             "content": "<p>One could say that there are countless forms of art, and while that is a beautiful sentiment, we couldn't find an idea that we liked that encompassed all forms of art (while still respecting the few limitations we had). We circled around ideas of community workshops with tutorials projected onto canvases or material to help people hone their crafts, or around a way to <em>\"geocache\"</em> artworks around the city for a gamified way for people to discover local artists.</p><p>Eventually, we came up with an idea of an interactive digital street signage installation that would display art to everyone passing by. People stopping at our installations could vote or give their opinion on the art and eventually buy merchandise to support the artist. You could in a way describe it as public art doomscrolling.</p>",
                             "picture": {
-                                "url": "./data/gallery/0/KISS_step_3.png",
+                                "url": "./gallery/0/KISS_step_3.png",
                                 "alt": "Sketch of interactive digital street signage idea"
                             }
                         },
@@ -54,7 +54,7 @@
                             "step_title": "Ideation: Refining the idea ⚞",
                             "content": "<p>Now that we had an idea, or at least a direction to focus on, we needed to refine it. We gathered more information by preparing and conducting several design methods:</p><ul><li>First, we each conducted interviews with experts in different domains involved in our current idea. The goal was to identify potential challenges, gather intel about the feasibility of our concept, and evaluate it. For instance, I interviewed the CEO of a Slovakian Digital Signage company, from whom I learned several important difficulties behind public digital signage. With these interviews, we narrowed down our design by integrating the information we gathered.</li><li>Next, we prepared and handed out <em>Cultural Probes</em> to local inhabitants of Seestadt. This allowed us to present our idea to people who would be affected by it, gaining direct feedback, and to collect information about their behaviors, preferences, and habits regarding art, art rating, and Seestadt itself.</li><li>Lastly, we created a tabletop game mimicking the rating interactions we were considering. We hosted games with inhabitants of the neighborhood and observed their behaviors to understand how the rating system impacted their perception of the art.</li></ul><p>Through these methods, we learned a lot about people's preferences, especially their habits in the neighborhood and their preferred way of rating art. All of this helped develop our concept idea into the final form of this <strong>purely</strong> ideational first phase of the project.</p>",
                             "picture": {
-                                "url": "./data/gallery/0/KISS_step_4.png",
+                                "url": "./gallery/0/KISS_step_4.png",
                                 "alt": "Cultural probes handed out to Seestadt inhabitants"
                             }
                         },
@@ -62,7 +62,7 @@
                             "step_title": "Prototyping: Tuning the idea... ⚟",
                             "content": "<p>We had a concrete, solid idea at the end of the ideation phase. However, we realized that our concept wasn't tangible enough, and the interactions lacked memorability. We went back to the drawing board, sketching interaction ideas while maintaining the core concept of a free little library with visual local art display and rating possibilities.</p><p>We developed the idea of 'special books' onto which local art would be projected. An additional tool or object could serve as a controller to enable further interactions. We considered pens (visually or magnetically tracked), ropes and pulleys, and finally decided on a hand-sized cube or dice to enable interactions.</p>",
                             "picture": {
-                                "url": "./data/gallery/0/KISS_step_5.png",
+                                "url": "./gallery/0/KISS_step_5.png",
                                 "alt": "Sketches of special books and interaction ideas"
                             }
                         },
@@ -70,7 +70,7 @@
                             "step_title": "Prototyping: Last checks before takeoff ⚞",
                             "content": "<p>The interactions worked as follows:</p><ul><li>Users first selected a special book (each book corresponding to different art collections). Placing it in the projection area allowed them to flip through the artworks. The books were otherwise blank, meaning they couldn't be used outside the system.</li><li>Users could rotate the control dice to select options for the current artwork projected onto the book. Each face of the cube enabled a different interaction, for a total of six options, such as revealing more information, rating the artwork, or expressing feelings along an emotions circle.</li></ul><p>To refine the idea, we created a physical mock-up and a digital wireframe. Student testers highlighted issues like ergonomics (books needed to be readable and comfortable) and interaction clarity (special books and cubes are uncommon items). The tests also confirmed the concept's interestingness and that we were moving in the right direction.</p>",
                             "picture": {
-                                "url": "./data/gallery/0/KISS_step_6.png",
+                                "url": "./gallery/0/KISS_step_6.png",
                                 "alt": "Mockup and wireframe screenshots of the special books and cube interactions"
                             }
                         },
@@ -78,7 +78,7 @@
                             "step_title": "Prototyping: What would it look like? How do we make it work? ⚞",
                             "content": "<p>With the UX approach confirmed, we worked on both visual design (UI and business identity) and technical implementation. Using a mobile phone, projector, 3D-printed cube, and QR-code stickers, we developed a Kotlin app displaying different screens based on the QR codes on books or cubes. The phone projected these screens onto the books.</p><br/><p>I handled business identity and visuals. We named the project “Kunstbibliothek in SeeStadt” (KISS), reflecting the product and location, and making a memorable acronym.</p><br/><p>The logo uses the acronym KISS:</p><ul><li>K: an open book, symbolizing both libraries and art experience.</li><li>I: a brush, representing art; a drop of paint flows into the first S.</li><li>SS: fluid letters symbolizing Seestadt lake and unrestrained art; identical letters ensure readability.</li></ul><br/><p>The logo has a blue gradient referencing Seestadt lake, introducing movement and evoking trust and confidence for collaborating artists.</p>",
                             "picture": {
-                                "url": "./data/gallery/0/KISS_step_7.png",
+                                "url": "./gallery/0/KISS_step_7.png",
                                 "alt": "Evolution of the KISS logo and 3D model concept"
                             }
                         },
@@ -86,7 +86,7 @@
                             "step_title": "Prototyping: Building the prototype ⚞",
                             "content": "<p>We built a high-fidelity prototype. No suitable shelf existed, so we made one ourselves. Using laser-cut wood for eco-friendliness and transportability, we customized premium notebooks as 'special books', each color-coded for differentiation. The interactive cube was 3D printed in blue and decorated with decal stickers for interaction symbols.</p><p>The shelf exterior was painted white with blue marks; the interior projection area was dark to improve projection quality. The phone and projector were hidden at the top. Additional promotional materials like posters and flyers were designed to attract participants.</p>",
                             "picture": {
-                                "url": "./data/gallery/0/KISS_step_8.png",
+                                "url": "./gallery/0/KISS_step_8.png",
                                 "alt": "Final prototype with shelf, books, and promotional poster"
                             }
                         },
@@ -94,7 +94,7 @@
                             "step_title": "Prototyping: Testing the prototype ⚞",
                             "content": "<p>The final stage involved testing our prototype in Seestadt near a supermarket. We successfully attracted participants.</p><p>We used a <a href=\"https://en.wikipedia.org/wiki/Think_aloud_protocol\">Think-Aloud Protocol</a>:</p><ul><li>Introduce the system, its purpose, and interactions.</li><li>Participants interact with the system, verbalizing their thoughts.</li><li>Observers intervene only if the participant is stuck or misses a key feature.</li><li>After several minutes, participants are asked about their experience and opinions on KISS.</li><li>Notes and anonymous recordings were taken throughout.</li></ul>",
                             "picture": {
-                                "url": "./data/gallery/0/KISS_step_9.png",
+                                "url": "./gallery/0/KISS_step_9.png",
                                 "alt": "Prototype being tested in Seestadt with participants"
                             }
                         }
