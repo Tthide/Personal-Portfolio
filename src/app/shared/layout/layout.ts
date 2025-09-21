@@ -8,7 +8,7 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [HeaderComponent, FooterComponent, RouterOutlet],
   template: `
-    <div class="flex flex-col bg-light min-h-dvh">    
+    <div class="flex flex-col bg-light min-h-svh">    
       <app-header />
       <main class=" grow px-6 py-5 lg:py-16 md:px-[7%] lg:px-[10%]">
         <router-outlet />
