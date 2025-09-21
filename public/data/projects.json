@@ -103,57 +103,6 @@
                 },
                 "gallery": []
             }
-        },
-        {
-            "id": 1,
-            "content": {
-                "info_card": {
-                    "title": "NODE WARS",
-                    "subtitle": "Interactive Tangible Design",
-                    "desc": "A Public Visual & Interactive Library to discover & support local Artists through physical yet digital artbooks.",
-                    "key_words": [
-                        "Design Thinking",
-                        "Prototyping",
-                        "User Studies"
-                    ],
-                    "picture": {
-                        "url": "./data/gallery/0/info_card_kiss.png",
-                        "alt": ""
-                    }
-                },
-                "project_overview": {
-                    "desc": "",
-                    "objective": "",
-                    "timeframe": "",
-                    "skills": "",
-                    "tech": ""
-                },
-                "process": {
-                    "steps": [
-                        {
-                            "step_desc": "",
-                            "desc_img_url": ""
-                        },
-                        {
-                            "step_desc": "",
-                            "desc_img_url": ""
-                        }
-                    ],
-                    "results": ""
-                },
-                "gallery": [
-                    {
-                        "picture": {
-                            "title": "Prototype showcase",
-                            "url": "assets/images/gallery1.png",
-                            "date": "2023-04-10",
-                            "location": "Berlin",
-                            "desc": "Our first public demo",
-                            "alt": "Picture of our first public demo"
-                        }
-                    }
-                ]
-            }
         }
     ]
 }
