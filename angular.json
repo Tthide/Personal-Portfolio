@@ -17,27 +17,25 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "outputPath": "dist/portfolio-angular",
+            "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "css",
+            "polyfills": ["zone.js"],
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
+                "input": "src/assets",
                 "output": "/"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "outputMode": "static",
-            "outputPath": "dist/portfolio-angular"
+            "styles": ["src/styles.css"],
+            "inlineStyleLanguage": "css",
+            "outputMode": "static"
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "outputHashing": "all",
               "budgets": [
                 {
                   "type": "initial",
@@ -49,8 +47,7 @@
                   "maximumWarning": "4kB",
                   "maximumError": "8kB"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
               "optimization": false,
@@ -81,28 +78,25 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "css",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
+                "input": "src/assets",
                 "output": "/"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "styles": ["src/styles.css"]
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "dir": "dist/portfolio-angular"
+          }
         }
-      }
     }
   }
 }
