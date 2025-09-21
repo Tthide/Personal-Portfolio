@@ -62,7 +62,7 @@ export class DataService {
     constructor(private http: HttpClient) { }
 
     getProjects(): Observable<{ projects: Project[] }> {
-        return this.http.get<{ projects: Project[] }>('/data/projects.json');
+        return this.http.get<{ projects: Project[] }>('data/projects.json');
     }
 
     getProjectById(id: number): Observable<Project | undefined> {
