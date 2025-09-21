@@ -7,7 +7,7 @@
 
 
         <!-- Image / Picture Placeholder -->
-        <div class="flex-1 flex items-center justify-center bg-light rounded-lg">
+        <div aria-hidden="true" class="flex-1 flex items-center justify-center bg-light rounded-lg">
             <div class="w-full h-full flex items-center justify-center">
                 @if (project.content.info_card.picture.url) {
                 <img [src]="project.content.info_card.picture.url" [alt]="project.content.info_card.picture.alt"
