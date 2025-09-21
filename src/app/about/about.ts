@@ -4,8 +4,9 @@ import { RotatingTextIconComponent } from '../shared/rotating-text-icon/rotating
 
 @Component({
   selector: 'app-about',
-  imports: [ContactFormComponent,RotatingTextIconComponent],
+  imports: [ContactFormComponent, RotatingTextIconComponent],
   templateUrl: './about.html',
+  standalone: true,
   styleUrl: './about.css'
 })
 export class AboutComponent {

@@ -5,6 +5,7 @@ import { RotatingTextIconComponent } from '../shared/rotating-text-icon/rotating
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [RouterModule,ProjectListComponent,RotatingTextIconComponent],
   templateUrl: './home.html',
   styleUrl: './home.css'

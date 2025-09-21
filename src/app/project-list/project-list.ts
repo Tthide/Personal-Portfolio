@@ -7,6 +7,7 @@ import { DataService, Project } from '../services/data.service';
   imports: [RouterModule],
   templateUrl: './project-list.html',
   styles: ``,
+  standalone: true,
   host: {
     'class': 'w-full flex flex-col items-center gap-10 block'
   }

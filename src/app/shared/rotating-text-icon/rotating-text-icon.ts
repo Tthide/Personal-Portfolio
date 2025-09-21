@@ -3,6 +3,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 @Component({
   selector: 'app-rotating-text-icon',
   imports: [],
+  standalone: true,
   template: `
 <div class="flex justify-center items-center w-full">
   <svg [attr.width]="size" [attr.height]="size" [style.color]="color">
@@ -48,7 +49,7 @@ export class RotatingTextIconComponent implements OnChanges {
   @Input() text: string = 'READ MORE';     // Circular text
   @Input() speed: number = 10;              // Rotation speed in seconds
   @Input() scale: number = 3;              // Icon scale
-    @Input() fontSize: number = 10;         // font size in px
+  @Input() fontSize: number = 10;         // font size in px
 
   circleRadius: number = 50;               // Dynamic radius for the text path
   iconOffset: number = 11.5;                 // Dynamic icon offset to center
@@ -77,7 +78,7 @@ export class RotatingTextIconComponent implements OnChanges {
   generateRepeatedText() {
     // Estimate number of repetitions needed based on circle circumference
     const circumference = 2 * Math.PI * this.circleRadius;
-    const approxCharWidth = this.fontSize*0.8 // rough estimate in px per character
+    const approxCharWidth = this.fontSize * 0.8 // rough estimate in px per character
     const charsNeeded = Math.ceil(circumference / approxCharWidth);
 
     const repeatTimes = Math.floor(charsNeeded / this.text.length);

@@ -8,18 +8,20 @@ import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-project-item',
-  imports: [RotatingTextIconComponent,AsyncPipe],
+  imports: [RotatingTextIconComponent, AsyncPipe],
   templateUrl: './project-item.html',
+  standalone: true,
   styleUrl: './project-item.css'
 })
 export class ProjectItemComponent {
   project$!: Observable<Project | undefined>;
 
-  constructor(private route: ActivatedRoute, private dataService: DataService) {}
+  constructor(private route: ActivatedRoute, private dataService: DataService) { }
 
   ngOnInit() {
     this.project$ = this.route.paramMap.pipe(
       map(params => params.get('id') ?? ''),
       switchMap(id => defer(() => this.dataService.getProjectById(+id)))
-    );  }
+    );
+  }
 }
