@@ -1,0 +1,108 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "content": {
+                "info_card": {
+                    "title": "KISS - Kunstbibliothek in Seestadt",
+                    "subtitle": "Interactive Tangible Design",
+                    "desc": "A Public Visual & Interactive Library to discover & support local Artists through physical yet digital artbooks.",
+                    "key_words": [
+                        "Design Thinking",
+                        "Prototyping",
+                        "User Studies"
+                    ],
+                    "picture": {
+                        "url": "assets/gallery/0/info_card_kiss.png",
+                        "alt": ""
+                    }
+                },
+                "project_overview": {
+                    "desc": "<strong>KISS</strong> combines the traditional free little library with digital art exhibitions. Passersby can still pick up or drop off regular books, but they also have the chance to interact with special art books. These books act as canvases for projected artworks, offering a tangible yet immersive way to experience local creativity. Interaction is further enriched through a hand-sized dice that lets users explore more information about the artworks and artists, express their feelings, and even connect to merchandise opportunities that support local artists financially.",
+                    "objective": "This project was conducted as part of a university course focused on Design Thinking. The course encouraged students to develop projects without restrictions on theme, technology, or impact, with the aim of animating and enriching public life in Seestadt (Vienna, Austria). Our team of four chose to support local artists, recognizing both the financial instability of the profession and its vital role in making communities more vibrant and livable. By showcasing art in Seestadt, we sought to bring soul and cultural identity to its newly built streets.",
+                    "timeframe": "8 months (2 academic semesters)",
+                    "skills": "Design Thinking, User Research, Wireframing, Prototyping, Product Business Identity, Various Design Methods",
+                    "tech": "Laser cutting machines for prototyping, painting and material finishing, SVG vector graphics, Canva for visual communication materials, graphic production for flyers and posters."
+                },
+                "process": {
+                    "steps": [
+                        {
+                            "step_title": "Ideation: the beginning ⚟",
+                            "content": "<p>Our only initial instructions and starting point were that we eventually needed to include the following in our project: \"sustainability, infrastructure, creativity and the neighborhood of Seestadt\". The project also had to include technology and computers in some way (since it was part of a computer science curriculum) and also that interactions <strong>must</strong> be <em>tangible</em>. This of course gave us a lot of freedom to choose what we could do, but also made it seem like we would not be able to find a good enough theme or idea to start.</p><p>Design thinking is an infinite cycle between expanding the ideas we come up with, then focusing inward and delving deeper onto some of them, then once again expanding on the selected concepts by allowing ourselves more creative freedom before refocusing on a specific idea. I showcase this cycle with little converging/diverging icons on each step.</p><p>Here we were only at the beginning, so we did not restrain our imaginations in producing lots of ideas, many of which were not close to what we eventually did, but that perhaps could have influenced even in a small way our approach or our final design.</p>",
+                            "picture": {
+                                "url": "",
+                                "alt": ""
+                            }
+                        },
+                        {
+                            "step_title": "Ideation: is this even a good idea? ⚞",
+                            "content": "<p>Eventually, we closed in on creating something that could benefit artists. Stereotypically, we had the vision that artists are people doing this work for the love of art and not for money, and that being an artist as a job was poorly remunerated.</p><p>Of course, we quickly came across the need to actually check whether that cliché even held a semblance of truth, or at the very least, to what extent artists need to be financially supported, as well as investigating several ways to do that.</p><p>To do that, we each conducted literature research to find sources and arguments that could support (or disprove) our initial hypothesis that artists needed help financially, and how to provide that. On my side, I primarily focused on art economics and the art market as a whole. Through this research, we found several promising ways to support artists financially, such as through merchandising or, to a lesser extent nowadays, NFTs. We also found that entering the traditional art market is tedious and that only a minority of living artists really profit from it.</p><p>It then became clear to us that this target group and our objective was promising, so we decided to keep it.</p>",
+                            "picture": {
+                                "url": "",
+                                "alt": ""
+                            }
+                        },
+                        {
+                            "step_title": "Ideation: well... what do we build now? ⚟",
+                            "content": "<p>One could say that there are countless forms of art, and while that is a beautiful sentiment, we couldn't find an idea that we liked that encompassed all forms of art (while still respecting the few limitations we had). We circled around ideas of community workshops with tutorials projected onto canvases or material to help people hone their crafts, or around a way to <em>\"geocache\"</em> artworks around the city for a gamified way for people to discover local artists.</p><p>Eventually, we came up with an idea of an interactive digital street signage installation that would display art to everyone passing by. People stopping at our installations could vote or give their opinion on the art and eventually buy merchandise to support the artist. You could in a way describe it as public art doomscrolling.</p>",
+                            "picture": {
+                                "url": "assets/gallery/0/KISS_step_3.png",
+                                "alt": "Sketch of interactive digital street signage idea"
+                            }
+                        },
+                        {
+                            "step_title": "Ideation: Refining the idea ⚞",
+                            "content": "<p>Now that we had an idea, or at least a direction to focus on, we needed to refine it. We gathered more information by preparing and conducting several design methods:</p><ul><li>First, we each conducted interviews with experts in different domains involved in our current idea. The goal was to identify potential challenges, gather intel about the feasibility of our concept, and evaluate it. For instance, I interviewed the CEO of a Slovakian Digital Signage company, from whom I learned several important difficulties behind public digital signage. With these interviews, we narrowed down our design by integrating the information we gathered.</li><li>Next, we prepared and handed out <em>Cultural Probes</em> to local inhabitants of Seestadt. This allowed us to present our idea to people who would be affected by it, gaining direct feedback, and to collect information about their behaviors, preferences, and habits regarding art, art rating, and Seestadt itself.</li><li>Lastly, we created a tabletop game mimicking the rating interactions we were considering. We hosted games with inhabitants of the neighborhood and observed their behaviors to understand how the rating system impacted their perception of the art.</li></ul><p>Through these methods, we learned a lot about people's preferences, especially their habits in the neighborhood and their preferred way of rating art. All of this helped develop our concept idea into the final form of this <strong>purely</strong> ideational first phase of the project.</p>",
+                            "picture": {
+                                "url": "assets/gallery/0/KISS_step_4.png",
+                                "alt": "Cultural probes handed out to Seestadt inhabitants"
+                            }
+                        },
+                        {
+                            "step_title": "Prototyping: Tuning the idea... ⚟",
+                            "content": "<p>We had a concrete, solid idea at the end of the ideation phase. However, we realized that our concept wasn't tangible enough, and the interactions lacked memorability. We went back to the drawing board, sketching interaction ideas while maintaining the core concept of a free little library with visual local art display and rating possibilities.</p><p>We developed the idea of 'special books' onto which local art would be projected. An additional tool or object could serve as a controller to enable further interactions. We considered pens (visually or magnetically tracked), ropes and pulleys, and finally decided on a hand-sized cube or dice to enable interactions.</p>",
+                            "picture": {
+                                "url": "assets/gallery/0/KISS_step_5.png",
+                                "alt": "Sketches of special books and interaction ideas"
+                            }
+                        },
+                        {
+                            "step_title": "Prototyping: Last checks before takeoff ⚞",
+                            "content": "<p>The interactions worked as follows:</p><ul><li>Users first selected a special book (each book corresponding to different art collections). Placing it in the projection area allowed them to flip through the artworks. The books were otherwise blank, meaning they couldn't be used outside the system.</li><li>Users could rotate the control dice to select options for the current artwork projected onto the book. Each face of the cube enabled a different interaction, for a total of six options, such as revealing more information, rating the artwork, or expressing feelings along an emotions circle.</li></ul><p>To refine the idea, we created a physical mock-up and a digital wireframe. Student testers highlighted issues like ergonomics (books needed to be readable and comfortable) and interaction clarity (special books and cubes are uncommon items). The tests also confirmed the concept's interestingness and that we were moving in the right direction.</p>",
+                            "picture": {
+                                "url": "assets/gallery/0/KISS_step_6.png",
+                                "alt": "Mockup and wireframe screenshots of the special books and cube interactions"
+                            }
+                        },
+                        {
+                            "step_title": "Prototyping: What would it look like? How do we make it work? ⚞",
+                            "content": "<p>With the UX approach confirmed, we worked on both visual design (UI and business identity) and technical implementation. Using a mobile phone, projector, 3D-printed cube, and QR-code stickers, we developed a Kotlin app displaying different screens based on the QR codes on books or cubes. The phone projected these screens onto the books.</p><br/><p>I handled business identity and visuals. We named the project “Kunstbibliothek in SeeStadt” (KISS), reflecting the product and location, and making a memorable acronym.</p><br/><p>The logo uses the acronym KISS:</p><ul><li>K: an open book, symbolizing both libraries and art experience.</li><li>I: a brush, representing art; a drop of paint flows into the first S.</li><li>SS: fluid letters symbolizing Seestadt lake and unrestrained art; identical letters ensure readability.</li></ul><br/><p>The logo has a blue gradient referencing Seestadt lake, introducing movement and evoking trust and confidence for collaborating artists.</p>",
+                            "picture": {
+                                "url": "assets/gallery/0/KISS_step_7.png",
+                                "alt": "Evolution of the KISS logo and 3D model concept"
+                            }
+                        },
+                        {
+                            "step_title": "Prototyping: Building the prototype ⚞",
+                            "content": "<p>We built a high-fidelity prototype. No suitable shelf existed, so we made one ourselves. Using laser-cut wood for eco-friendliness and transportability, we customized premium notebooks as 'special books', each color-coded for differentiation. The interactive cube was 3D printed in blue and decorated with decal stickers for interaction symbols.</p><p>The shelf exterior was painted white with blue marks; the interior projection area was dark to improve projection quality. The phone and projector were hidden at the top. Additional promotional materials like posters and flyers were designed to attract participants.</p>",
+                            "picture": {
+                                "url": "assets/gallery/0/KISS_step_8.png",
+                                "alt": "Final prototype with shelf, books, and promotional poster"
+                            }
+                        },
+                        {
+                            "step_title": "Prototyping: Testing the prototype ⚞",
+                            "content": "<p>The final stage involved testing our prototype in Seestadt near a supermarket. We successfully attracted participants.</p><p>We used a <a href=\"https://en.wikipedia.org/wiki/Think_aloud_protocol\">Think-Aloud Protocol</a>:</p><ul><li>Introduce the system, its purpose, and interactions.</li><li>Participants interact with the system, verbalizing their thoughts.</li><li>Observers intervene only if the participant is stuck or misses a key feature.</li><li>After several minutes, participants are asked about their experience and opinions on KISS.</li><li>Notes and anonymous recordings were taken throughout.</li></ul>",
+                            "picture": {
+                                "url": "assets/gallery/0/KISS_step_9.png",
+                                "alt": "Prototype being tested in Seestadt with participants"
+                            }
+                        }
+                    ],
+                    "results": "<p>In total, we conducted tests with 7 passerbys over a period of approximately an hour and a half. Overall feedback was very positive and highlighted how promising this idea is. Several participants enjoyed the interactions and expressed a desire for such a library to remain in their neighborhood. Most participants handled all interactions well once explained, and most also appreciated the idea of supporting artists, particularly local ones.</p><br/><p>Areas for improvement include using a better, brighter projection device, creating a smaller interaction cube (especially relative to the size of the book), and including more art collections and diverse art genres (as well as actual human-made art, in contrast to the AI-generated art that was used). Additionally, we did not focus on designing and implementing the merchandising aspect of the system, and thus the financial support for artists. If we were to continue this project, the next step would involve applying Design Thinking to create the merchandising flow for users, and a system for artists to sell and submit their work for display.</p><br/><h4 class=\"text-accent_purple text-1xl md:text-2xl font-bold font-spartan\">Personal Reflection</h4><p>I really enjoyed this project and learning about new design methods, especially through practical application. Conducting all of these methods helped me realize how important empathy is when designing for people, as it is the best way to understand what can and should be created. It also opened my eyes to the courage of people who approach strangers on the streets to raise awareness, ask questions, or promote a cause. Capturing people’s attention in this way is far harder than it seems. After this project, I spoke with more of them and gained even greater appreciation for their efforts.</p><br/><p>Finally, as a UX designer and engineer, this project introduced me to the concept of iterative design, and I found myself enjoying it immensely. Of course, there are limitations to everything, and Design Thinking does not eliminate them. In particular, some people follow it strictly like a recipe, but I see it more as a toolbox of suggestions. Nevertheless, my approach to designing and managing projects through structured design phases has definitely evolved and been influenced by the principles of Design Thinking.</p><br/><p>This project has fundamentally shaped how I approach UX and engineering: iterative, empathetic, and adaptable to real user needs.</p>"
+                },
+                "gallery": []
+            }
+        }
+    ]
+}

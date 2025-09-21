@@ -1,0 +1,55 @@
+{
+    "id": 1000,
+    "content": {
+        "info_card": {
+            "title": "",
+            "subtitle": "",
+            "desc": "",
+            "key_words": [],
+            "picture": {
+                "url": "",
+                "alt": ""
+            }
+        },
+        "project_overview": {
+            "desc": "",
+            "objective": "",
+            "timeframe": "",
+            "skills": "",
+            "tech": ""
+        },
+        "process": {
+            "steps": [
+                {
+                    "step_title": "",
+                    "content": "",
+                    "picture": {
+                        "url": "",
+                        "alt": ""
+                    }
+                },
+                {
+                    "step_title": "",
+                    "content": "",
+                    "picture": {
+                        "url": "",
+                        "alt": ""
+                    }
+                }
+            ],
+            "results": ""
+        },
+        "gallery": [
+            {
+                "picture": {
+                    "title": "",
+                    "url": "",
+                    "date": "",
+                    "location": "",
+                    "desc": "",
+                    "alt": "Picture of our first public demo"
+                }
+            }
+        ]
+    }
+}
