@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from "@angular/core";
+import { Component, NgZone, OnDestroy } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { DataService, Project } from "../services/data.service";
 import { Observable, Subscription, defer } from "rxjs";
@@ -10,21 +10,23 @@ declare let createUnityInstance: any; // Unity global from loader.js
 
 @Component({
   selector: "app-project-item",
-  imports: [RotatingTextIconComponent, AsyncPipe,],
+  imports: [RotatingTextIconComponent, AsyncPipe],
   templateUrl: "./project-item.html",
   standalone: true,
   styleUrl: "./project-item.css"
 })
 export class ProjectItemComponent implements OnDestroy {
   project$!: Observable<Project | undefined>;
-
+  [x: string]: any;
   // UI state for loading progress
   isUnityLoading = false;
   unityProgress = 0;
   private sub?: Subscription;
   private unityLoaded = false;
 
-  constructor(private route: ActivatedRoute, private dataService: DataService) { }
+  private resizeObserver?: ResizeObserver;
+
+  constructor(private route: ActivatedRoute, private dataService: DataService, private zone: NgZone) { }
 
   ngOnInit() {
     this.project$ = this.route.paramMap.pipe(
@@ -60,18 +62,26 @@ export class ProjectItemComponent implements OnDestroy {
         streamingAssetsUrl: 'StreamingAssets',
         companyName: 'YourCompany',
         productName: 'YourGame',
-        productVersion: '1.0'
+        productVersion: '1.0',
+        matchWebGLToCanvasSize: false
       };
+
 
       console.log('[Unity] Creating instance...');
       createUnityInstance(canvas, config, (progress: number) => {
-        this.unityProgress = progress;
-        console.log(`[Unity] Loading progress: ${(progress * 100).toFixed(0)}%`);
+        this.zone.run(() => this.unityProgress = progress);
+      }).then((unityInstance: any) => {
+        console.log('[Unity] Loaded successfully!', unityInstance);
+        this.isUnityLoading = false;
+
+        // Ensure initial sizing happens after DOM layout
+        requestAnimationFrame(() => this.adjustCanvasSize(canvas));
+
+        // Watch for container resizing
+        const container = canvas.parentElement!;
+        this.resizeObserver = new ResizeObserver(() => this.adjustCanvasSize(canvas));
+        this.resizeObserver.observe(container);
       })
-        .then((unityInstance: any) => {
-          console.log('[Unity] Loaded successfully!', unityInstance);
-          this.isUnityLoading = false;
-        })
         .catch((err: any) => {
           console.error('[Unity] Failed to load:', err);
           this.isUnityLoading = false;
@@ -87,6 +97,24 @@ export class ProjectItemComponent implements OnDestroy {
 
   ngOnDestroy() {
     this.sub?.unsubscribe();
+  }
+
+  adjustCanvasSize(canvas: HTMLCanvasElement) {
+    const container = canvas.parentElement;
+    if (!container) return;
+
+    const { width, height } = container.getBoundingClientRect();
+
+    const maxDPR = 2; // cap high-DPI scaling
+    const dpr = Math.max(window.devicePixelRatio, maxDPR);
+
+    // Set visual size
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+
+    // Set internal buffer
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
   }
 
 }

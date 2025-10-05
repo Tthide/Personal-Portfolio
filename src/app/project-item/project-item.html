@@ -10,10 +10,10 @@
         <div class="flex-1 flex flex-col lg:flex-row items-center justify-center w-full overflow-hidden gap-8">
             <!-- Picture -->
             @if(project.content.info_card.hasGame){
-            <div id="unity-container" class="max-w-full max-h-full h-full lg:flex-1 flex justify-center items-center">
+            <div id="unity-container" class="max-w-full max-h-full h-full w-full lg:flex-1 flex justify-center items-stretch">
 
-                <div id="unity-canvas-container" class="relative h-full aspect-video flex justify-center items-center">
-                    <canvas id="unity-canvas" class="w-full h-full"></canvas>
+                <div id="unity-canvas-container" class="relative w-full h-full flex justify-center items-end">
+                    <canvas id="unity-canvas" class="w-full h-full "></canvas>
 
                     <!-- Loading overlay -->
                     @if(isUnityLoading){
