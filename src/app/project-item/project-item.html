@@ -6,10 +6,36 @@
         <h1 class="text-smooth_dark text-5xl lg:text-8xl font-spartan mb-8"
             [innerHTML]="project.content.info_card.title"></h1>
 
-        <!-- Middle container: img + icon on lg+, img only on smaller screens -->
+        <!-- Middle container: Game or img + icon on lg+, img only on smaller screens -->
         <div class="flex-1 flex flex-col lg:flex-row items-center justify-center w-full overflow-hidden gap-8">
             <!-- Picture -->
-            @if (project.content.info_card.picture.url) {
+            @if(project.content.info_card.hasGame){
+            <div id="unity-container" class="max-w-full max-h-full lg:flex-1 flex justify-center items-center">
+                <div id="unity-canvas-container" class="relative w-full h-[600px] lg:h-[800px]">
+                    <canvas id="unity-canvas" class="w-full h-full"></canvas>
+                </div>
+                <!-- Loading overlay -->
+                @if(isUnityLoading){
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-70 text-white font-spartan">
+                    <div class="w-2/3 bg-gray-700 rounded-full h-2 mb-4 overflow-hidden">
+                        <div class="bg-white h-full transition-all duration-300" [style.width.%]="unityProgress * 100">
+                        </div>
+                    </div>
+                    <span class="text-sm">{{ (unityProgress * 100)}}%</span>
+                    @if(unityProgress < 1){ <span class="text-xs mt-2 text-gray-300">Loading Unity Game...</span>
+                        }
+
+                        @if(unityProgress >= 1){
+                        <span class="text-xs mt-2 text-green-400">Almost ready!</span>
+                        }
+
+                </div>
+                }
+            </div>
+            }
+            <!-- Unity Game -->
+            @else if (project.content.info_card.picture.url) {
             <img [src]="project.content.info_card.picture.url" [alt]="project.content.info_card.picture.alt"
                 class="max-w-full max-h-full object-contain lg:flex-1" />
             }

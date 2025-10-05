@@ -9,6 +9,7 @@ export interface InfoCard {
     desc: string; 
     key_words: string[];
     picture: Picture;
+    hasGame:boolean;
 }
 
 export interface Picture {

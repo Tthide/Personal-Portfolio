@@ -9,7 +9,8 @@
             "picture": {
                 "url": "",
                 "alt": ""
-            }
+            },
+            "hasGame":false
         },
         "project_overview": {
             "desc": "",

@@ -121,7 +121,8 @@
                     "picture": {
                         "url": "gallery/1/Node_wars_main_picture.png",
                         "alt": "Node Wars gameplay preview"
-                    }
+                    },
+                    "hasGame": true
                 },
                 "project_overview": {
                     "desc": "<strong>Node Wars</strong> is a turn-based multiplayer strategy game for PC that takes place in space. The map is composed of interconnected circles representing planets, each divided into multiple segments. Players take on the role of rival civilizations, competing to conquer planets and strategically block opponents in a race for galactic domination.",
