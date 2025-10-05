@@ -9,7 +9,8 @@
             "picture": {
                 "url": "",
                 "alt": ""
-            }
+            },
+            "hasGame":false
         },
         "project_overview": {
             "desc": "",
@@ -33,11 +34,13 @@
                     "content": "",
                     "picture": {
                         "url": "",
-                        "alt": ""
+                        "alt": "",
+                        "source": ""
                     }
                 }
             ],
-            "results": ""
+            "results": "",
+            "personal_reflection": ""
         },
         "gallery": [
             {
