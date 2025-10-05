@@ -7,11 +7,11 @@
 
 
         <!-- Image / Picture Placeholder -->
-        <div aria-hidden="true" class="flex-1 flex items-center justify-center bg-light rounded-lg">
-            <div class="w-full h-full flex items-center justify-center">
+        <div aria-hidden="true" class="flex-1 flex items-center justify-center bg-light rounded-lg overflow-hidden">
+            <div class="w-full max-h-[75svh] lg:max-h-full lg:h-full flex items-center justify-center ">
                 @if (project.content.info_card.picture.url) {
                 <img [src]="project.content.info_card.picture.url" [alt]="project.content.info_card.picture.alt"
-                    class="object-contain max-h-[60svh] max-w-full" />
+                    class="w-full h-full object-contain" />
                 }
                 @else {
                 <span class="text-smooth_dark text-lg sm:text-xl font-spartan text-center">
@@ -24,8 +24,8 @@
 
         <!-- Project Info -->
         <div
-            class="w-full md:w-1/2 lg:w-[33%] px-4 lg:px-7 py-7 lg:py-20 rounded-lg bg-light flex flex-col gap-2 lg:gap-9 self-stretch">
-            <h3 class="text-accent_purple text-3xl lg:text-6xl font-spartan break-words "
+            class="w-full md:w-1/2 lg:w-[33%] px-4 lg:px-7 py-4 lg:py-12 2xl:py-16 rounded-lg bg-light flex flex-col gap-2 2xl:gap-6 self-stretch justify-around">
+            <h3 class="text-accent_purple text-3xl lg:text-4xl 2xl:text-6xl font-spartan break-words "
                 [title]="project.content.info_card.title">
                 {{ project.content.info_card.title }}
             </h3>
@@ -34,7 +34,7 @@
                 {{ project.content.info_card.subtitle }}
             </h4>
 
-            <p class="text-smooth_dark text-base lg:text-xl font-spartan">
+            <p class="hidden lg:flex text-smooth_dark text-base lg:text-xl font-spartan">
                 {{ project.content.info_card.desc }}
             </p>
 
