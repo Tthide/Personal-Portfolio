@@ -32,6 +32,7 @@ export interface ProcessStep {
 export interface Process {
     steps: ProcessStep[];
     results: string;
+    personal_reflection:string;
 }
 
 export interface GalleryItem {
