@@ -108,7 +108,7 @@ export class ProjectItemComponent implements OnDestroy {
     this.sub?.unsubscribe();
   }
 
-  adjustCanvasSize(canvas: HTMLCanvasElement) {
+  adjustCanvasSize(canvas: HTMLCanvasElement, fullscreenResize: boolean = false) {
     /* Method to resize the unity canva according to its parent HTML container in the template
     While the Canvas element CSS size and the WebGL render target size are by default in sync, here it wasn't really rendering well to my liking
     Therefore I manually resize the WebGL render target size */
@@ -124,20 +124,36 @@ export class ProjectItemComponent implements OnDestroy {
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
 
-    // Set internal buffer (WebGL render target size)
-    canvas.width = width * dpr;
-    canvas.height = height * dpr;
+    if (!fullscreenResize) {    // Set internal buffer (WebGL render target size)
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+    }
+    else {
+      canvas.width = width * Math.max(dpr / 2, 1);
+      canvas.height = height * Math.max(dpr / 2, 1);
+    }
   }
 
   toggleFullScreen() {
     const canvasContainer = document.getElementById('unity-canvas-container');
+
+    const canvas = document.querySelector("#unity-canvas") as HTMLCanvasElement;
+
     if (!canvasContainer) return;
+
+    // Watch for container resizing
+
+    const container = canvas.parentElement!;
+
 
     if (!document.fullscreenElement) {
       canvasContainer.requestFullscreen()
         .then(() => {
 
           this.isFullscreen = !this.isFullscreen;
+          this.adjustCanvasSize(canvas, true);
+          this.resizeObserver = new ResizeObserver(() => this.adjustCanvasSize(canvas, true));
+          this.resizeObserver.observe(container);
         })
         .catch(err => {
           console.error(`Error attempting to enable full-screen mode: ${err.message}`);
@@ -145,6 +161,9 @@ export class ProjectItemComponent implements OnDestroy {
     } else {
       document.exitFullscreen();
       this.isFullscreen = !this.isFullscreen;
+      this.adjustCanvasSize(canvas, false);
+      this.resizeObserver = new ResizeObserver(() => this.adjustCanvasSize(canvas, false));
+      this.resizeObserver.observe(container);
 
     }
   }
