@@ -17,12 +17,15 @@ declare let createUnityInstance: any; // Unity global from loader.js
 })
 export class ProjectItemComponent implements OnDestroy {
   project$!: Observable<Project | undefined>;
-  [x: string]: any;
+
   // UI state for loading progress
   isUnityLoading = false;
   unityProgress = 0;
   private sub?: Subscription;
   private unityLoaded = false;
+
+  // UI State fullscreen
+  isFullscreen = false;
 
   private resizeObserver?: ResizeObserver;
 
@@ -44,12 +47,17 @@ export class ProjectItemComponent implements OnDestroy {
   }
 
   private loadUnityGame(gameId: number) {
+    /* Unity App loading pipeline */
     console.log('[Unity] Loading script...');
     this.isUnityLoading = true;
-    this.unityProgress = 0; const script = document.createElement("script");
+    this.unityProgress = 0;
+    const script = document.createElement("script");
 
+    // Fetching game's loader script
     script.src = `unity-webgl/${gameId}/unity.loader.js`;
     console.log(`[Unity] Script path: ${script.src}`);
+
+
     script.onload = () => {
       console.log('[Unity] Script loaded successfully!');
       const canvas = document.querySelector("#unity-canvas") as HTMLCanvasElement;
@@ -92,6 +100,7 @@ export class ProjectItemComponent implements OnDestroy {
       console.error('[Unity] Script failed to load', e);
       this.isUnityLoading = false;
     };
+
     document.body.appendChild(script);
   }
 
@@ -100,21 +109,44 @@ export class ProjectItemComponent implements OnDestroy {
   }
 
   adjustCanvasSize(canvas: HTMLCanvasElement) {
+    /* Method to resize the unity canva according to its parent HTML container in the template
+    While the Canvas element CSS size and the WebGL render target size are by default in sync, here it wasn't really rendering well to my liking
+    Therefore I manually resize the WebGL render target size */
     const container = canvas.parentElement;
     if (!container) return;
 
     const { width, height } = container.getBoundingClientRect();
 
-    const maxDPR = 2; // cap high-DPI scaling
+    const maxDPR = 2; // cap high-DPI scaling, found that 2 works well with trial and error
     const dpr = Math.max(window.devicePixelRatio, maxDPR);
 
-    // Set visual size
+    // Set visual size (Canvas element CSS size)
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
 
-    // Set internal buffer
+    // Set internal buffer (WebGL render target size)
     canvas.width = width * dpr;
     canvas.height = height * dpr;
+  }
+
+  toggleFullScreen() {
+    const canvasContainer = document.getElementById('unity-canvas-container');
+    if (!canvasContainer) return;
+
+    if (!document.fullscreenElement) {
+      canvasContainer.requestFullscreen()
+        .then(() => {
+
+          this.isFullscreen = !this.isFullscreen;
+        })
+        .catch(err => {
+          console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+        });
+    } else {
+      document.exitFullscreen();
+      this.isFullscreen = !this.isFullscreen;
+
+    }
   }
 
 }
