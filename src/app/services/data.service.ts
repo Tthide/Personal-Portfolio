@@ -14,6 +14,7 @@ export interface InfoCard {
 export interface Picture {
     url: string;
     alt:string;
+    source:string;
 }
 export interface ProjectOverview {
     desc: string;

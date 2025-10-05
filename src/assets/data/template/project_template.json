@@ -33,12 +33,13 @@
                     "content": "",
                     "picture": {
                         "url": "",
-                        "alt": ""
+                        "alt": "",
+                        "source": ""
                     }
                 }
             ],
             "results": "",
-            "personal_reflection":""
+            "personal_reflection": ""
         },
         "gallery": [
             {

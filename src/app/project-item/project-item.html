@@ -83,10 +83,14 @@
                 <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">
                     Process Step {{ idx + 1 }} - {{ step.step_title }}
                 </h3>
-                <div class="project-content-rich-text"
-                    [innerHTML]="step.content"></div>
+                <div class="project-content-rich-text" [innerHTML]="step.content"></div>
                 @if (step.picture) {
                 <img [src]="step.picture.url" [alt]="step.picture.alt" class="w-full max-h-[70svh] object-contain" />
+                @if(step.picture.source){
+                <p class="text-sm text-gray-500 mt-1">
+                    {{ step.picture.source }}
+                </p>
+                }
                 }
             </div>
             }
@@ -97,8 +101,7 @@
     <!-- Results -->
     <section class="flex flex-col gap-6 md:gap-12">
         <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">RESULTS & IMPACTS</h3>
-        <div class="project-content-rich-text"
-            [innerHTML]="project.content.process.results">
+        <div class="project-content-rich-text" [innerHTML]="project.content.process.results">
         </div>
 
     </section>
@@ -110,8 +113,7 @@
 
     <section class="flex flex-col gap-6 md:gap-12">
         <h3 class="text-accent_purple text-2xl md:text-3xl font-bold font-spartan">PERSONAL REFLECTION</h3>
-        <div class="project-content-rich-text"
-            [innerHTML]="project.content.process.personal_reflection"></div>
+        <div class="project-content-rich-text" [innerHTML]="project.content.process.personal_reflection"></div>
 
     </section>
 
